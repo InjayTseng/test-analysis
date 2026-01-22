@@ -1,0 +1,2268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Markets Intelligence Report | January 2026</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        /* ========================================
+           DESIGN SYSTEM - Prediction Markets Report
+           Based on UI/UX Pro Max recommendations:
+           - Financial Dashboard style
+           - Dark Mode (OLED) optimized
+           - WCAG AAA accessibility
+           ======================================== */
+
+        :root {
+            /* Core Colors - Enhanced contrast for OLED */
+            --bg-primary: #000000;
+            --bg-secondary: #0a0a0a;
+            --bg-card: #0f0f0f;
+            --bg-card-hover: #1a1a1a;
+            --bg-highlight: #1f1f1f;
+            --bg-elevated: #141414;
+
+            /* Text - WCAG AAA compliant contrast ratios */
+            --text-primary: #f8fafc;
+            --text-secondary: #cbd5e1;
+            --text-muted: #94a3b8;
+
+            /* Accent Colors - Financial dashboard palette */
+            --accent-blue: #60a5fa;
+            --accent-blue-bright: #93c5fd;
+            --accent-green: #4ade80;
+            --accent-green-bright: #86efac;
+            --accent-red: #f87171;
+            --accent-red-bright: #fca5a5;
+            --accent-yellow: #fbbf24;
+            --accent-purple: #c084fc;
+            --accent-cyan: #22d3ee;
+            --accent-orange: #fb923c;
+
+            /* Gradients - Subtle glow effects */
+            --gradient-blue: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+            --gradient-green: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+            --gradient-purple: linear-gradient(135deg, #a855f7 0%, #7c3aed 100%);
+            --gradient-orange: linear-gradient(135deg, #f97316 0%, #ea580c 100%);
+            --gradient-hero: linear-gradient(180deg, #0a0a0a 0%, #000000 100%);
+            --gradient-card: linear-gradient(145deg, #141414 0%, #0a0a0a 100%);
+
+            /* Borders - More visible on dark */
+            --border-color: #27272a;
+            --border-highlight: #3f3f46;
+            --border-glow: rgba(96, 165, 250, 0.3);
+
+            /* Typography */
+            --font-display: 'Inter', system-ui, -apple-system, sans-serif;
+            --font-mono: 'JetBrains Mono', monospace;
+
+            /* Spacing & Radius */
+            --radius-sm: 8px;
+            --radius-md: 12px;
+            --radius-lg: 16px;
+            --radius-xl: 24px;
+
+            /* Shadows - Subtle glow for dark mode */
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.5), 0 1px 2px rgba(0,0,0,0.3);
+            --shadow-md: 0 4px 16px rgba(0,0,0,0.6), 0 0 1px rgba(255,255,255,0.05);
+            --shadow-lg: 0 12px 40px rgba(0,0,0,0.7), 0 0 1px rgba(255,255,255,0.08);
+            --shadow-glow-blue: 0 0 40px rgba(96, 165, 250, 0.15), 0 0 80px rgba(96, 165, 250, 0.05);
+            --shadow-glow-green: 0 0 40px rgba(74, 222, 128, 0.15);
+            --shadow-glow-purple: 0 0 40px rgba(192, 132, 252, 0.15);
+        }
+
+        /* Reset & Base */
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            html { scroll-behavior: auto; }
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+
+        body {
+            font-family: var(--font-display);
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.7;
+            font-size: 1rem;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Focus States - Accessibility */
+        :focus-visible {
+            outline: 2px solid var(--accent-blue);
+            outline-offset: 2px;
+        }
+
+        /* ========================================
+           NAVIGATION
+           ======================================== */
+        .nav {
+            position: fixed;
+            top: 12px;
+            left: 12px;
+            right: 12px;
+            z-index: 1000;
+            background: rgba(0, 0, 0, 0.85);
+            backdrop-filter: blur(20px) saturate(180%);
+            -webkit-backdrop-filter: blur(20px) saturate(180%);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-lg);
+            padding: 0 1.5rem;
+        }
+
+        .nav-inner {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 56px;
+        }
+
+        .nav-logo {
+            font-weight: 700;
+            font-size: 1rem;
+            color: var(--text-primary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            cursor: pointer;
+            transition: opacity 0.2s ease;
+        }
+
+        .nav-logo:hover { opacity: 0.8; }
+
+        .nav-logo-icon {
+            width: 36px;
+            height: 36px;
+            background: var(--gradient-blue);
+            border-radius: var(--radius-sm);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1rem;
+            box-shadow: var(--shadow-glow-blue);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 0.25rem;
+        }
+
+        .nav-link {
+            color: var(--text-muted);
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: var(--radius-sm);
+            font-size: 0.875rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .nav-link:hover {
+            color: var(--text-primary);
+            background: var(--bg-highlight);
+        }
+
+        .nav-link.active {
+            color: var(--accent-blue-bright);
+            background: rgba(96, 165, 250, 0.1);
+        }
+
+        /* ========================================
+           HERO SECTION
+           ======================================== */
+        .hero {
+            padding: 7rem 2rem 5rem;
+            background: var(--gradient-hero);
+            min-height: 85vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background:
+                radial-gradient(ellipse 80% 50% at 50% -20%, rgba(96, 165, 250, 0.08) 0%, transparent 60%),
+                radial-gradient(ellipse 60% 40% at 80% 60%, rgba(192, 132, 252, 0.05) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .hero-inner {
+            max-width: 1400px;
+            margin: 0 auto;
+            width: 100%;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.625rem;
+            background: var(--bg-elevated);
+            border: 1px solid var(--border-color);
+            padding: 0.5rem 1.25rem;
+            border-radius: 100px;
+            font-size: 0.8125rem;
+            font-weight: 500;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+        }
+
+        .hero-badge-dot {
+            width: 8px;
+            height: 8px;
+            background: var(--accent-green);
+            border-radius: 50%;
+            box-shadow: 0 0 8px var(--accent-green);
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.6; transform: scale(0.95); }
+        }
+
+        .hero-title {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            font-weight: 800;
+            line-height: 1.05;
+            margin-bottom: 1.5rem;
+            letter-spacing: -0.03em;
+            color: var(--text-primary);
+        }
+
+        .hero-title-gradient {
+            background: linear-gradient(135deg, #fff 0%, #94a3b8 50%, #60a5fa 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-subtitle {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            max-width: 640px;
+            margin-bottom: 3.5rem;
+            line-height: 1.7;
+        }
+
+        .hero-stats {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.25rem;
+        }
+
+        @media (max-width: 1024px) {
+            .hero-stats { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        @media (max-width: 640px) {
+            .hero-stats { grid-template-columns: 1fr; }
+        }
+
+        /* ========================================
+           STAT CARDS
+           ======================================== */
+        .stat-card {
+            background: var(--gradient-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-lg);
+            padding: 1.75rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stat-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+        }
+
+        .stat-card:hover {
+            border-color: var(--border-highlight);
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .stat-card:hover.blue { box-shadow: var(--shadow-glow-blue); }
+        .stat-card:hover.green { box-shadow: var(--shadow-glow-green); }
+        .stat-card:hover.purple { box-shadow: var(--shadow-glow-purple); }
+
+        .stat-label {
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 0.75rem;
+        }
+
+        .stat-value {
+            font-size: 2.25rem;
+            font-weight: 700;
+            font-family: var(--font-mono);
+            line-height: 1.1;
+            margin-bottom: 0.25rem;
+        }
+
+        .stat-value.blue { color: var(--accent-blue-bright); }
+        .stat-value.green { color: var(--accent-green-bright); }
+        .stat-value.purple { color: var(--accent-purple); }
+        .stat-value.orange { color: var(--accent-orange); }
+
+        .stat-change {
+            font-size: 0.8125rem;
+            color: var(--accent-green);
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+        }
+
+        /* ========================================
+           SECTIONS
+           ======================================== */
+        .section {
+            padding: 6rem 2rem;
+            border-bottom: 1px solid var(--border-color);
+            position: relative;
+        }
+
+        .section-inner {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            margin-bottom: 3.5rem;
+        }
+
+        .section-label {
+            font-size: 0.8125rem;
+            font-weight: 600;
+            color: var(--accent-blue);
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .section-label::before {
+            content: '';
+            width: 24px;
+            height: 2px;
+            background: var(--accent-blue);
+            border-radius: 1px;
+        }
+
+        .section-title {
+            font-size: 2.25rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            letter-spacing: -0.02em;
+            color: var(--text-primary);
+        }
+
+        .section-desc {
+            color: var(--text-secondary);
+            max-width: 640px;
+            font-size: 1.0625rem;
+            line-height: 1.7;
+        }
+
+        /* ========================================
+           TABLES
+           ======================================== */
+        .table-wrapper {
+            overflow-x: auto;
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--border-color);
+            background: var(--bg-card);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.9375rem;
+        }
+
+        th {
+            text-align: left;
+            padding: 1rem 1.5rem;
+            font-weight: 600;
+            color: var(--text-muted);
+            background: var(--bg-elevated);
+            border-bottom: 1px solid var(--border-color);
+            white-space: nowrap;
+            font-size: 0.8125rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        td {
+            padding: 1.125rem 1.5rem;
+            border-bottom: 1px solid var(--border-color);
+            color: var(--text-secondary);
+        }
+
+        tr:last-child td { border-bottom: none; }
+
+        tr {
+            cursor: pointer;
+            transition: background 0.2s ease;
+        }
+
+        tr:hover td {
+            background: var(--bg-highlight);
+            color: var(--text-primary);
+        }
+
+        .table-highlight {
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        /* ========================================
+           CARDS
+           ======================================== */
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-lg);
+            padding: 2rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            border-color: var(--border-highlight);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .card-icon {
+            width: 52px;
+            height: 52px;
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: white;
+            flex-shrink: 0;
+        }
+
+        .card-icon.kalshi { background: var(--gradient-blue); box-shadow: var(--shadow-glow-blue); }
+        .card-icon.polymarket { background: var(--gradient-purple); box-shadow: var(--shadow-glow-purple); }
+        .card-icon.opinion { background: var(--gradient-orange); }
+
+        .card-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--text-primary);
+        }
+
+        .card-subtitle {
+            font-size: 0.8125rem;
+            color: var(--text-muted);
+            margin-top: 0.25rem;
+        }
+
+        .card-content {
+            color: var(--text-secondary);
+            font-size: 0.9375rem;
+            line-height: 1.7;
+        }
+
+        .card-content p { margin-bottom: 0.5rem; }
+        .card-content strong { color: var(--text-primary); }
+
+        /* ========================================
+           BADGES
+           ======================================== */
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            padding: 0.375rem 0.875rem;
+            border-radius: 100px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.03em;
+        }
+
+        .badge-green {
+            background: rgba(74, 222, 128, 0.15);
+            color: var(--accent-green-bright);
+            border: 1px solid rgba(74, 222, 128, 0.3);
+        }
+        .badge-red {
+            background: rgba(248, 113, 113, 0.15);
+            color: var(--accent-red-bright);
+            border: 1px solid rgba(248, 113, 113, 0.3);
+        }
+        .badge-yellow {
+            background: rgba(251, 191, 36, 0.15);
+            color: var(--accent-yellow);
+            border: 1px solid rgba(251, 191, 36, 0.3);
+        }
+        .badge-blue {
+            background: rgba(96, 165, 250, 0.15);
+            color: var(--accent-blue-bright);
+            border: 1px solid rgba(96, 165, 250, 0.3);
+        }
+        .badge-purple {
+            background: rgba(192, 132, 252, 0.15);
+            color: var(--accent-purple);
+            border: 1px solid rgba(192, 132, 252, 0.3);
+        }
+        .badge-orange {
+            background: rgba(251, 146, 60, 0.15);
+            color: var(--accent-orange);
+            border: 1px solid rgba(251, 146, 60, 0.3);
+        }
+
+        /* ========================================
+           TABS
+           ======================================== */
+        .tabs {
+            display: flex;
+            gap: 0.5rem;
+            margin-bottom: 2.5rem;
+            padding: 0.5rem;
+            background: var(--bg-elevated);
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border-color);
+            width: fit-content;
+        }
+
+        .tab {
+            padding: 0.75rem 1.5rem;
+            background: transparent;
+            border: none;
+            color: var(--text-muted);
+            font-size: 0.9375rem;
+            font-weight: 500;
+            cursor: pointer;
+            border-radius: var(--radius-sm);
+            transition: all 0.2s ease;
+            font-family: var(--font-display);
+        }
+
+        .tab:hover {
+            color: var(--text-primary);
+            background: var(--bg-card);
+        }
+
+        .tab.active {
+            color: var(--text-primary);
+            background: var(--bg-card);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .tab-content { display: none; }
+        .tab-content.active { display: block; }
+
+        /* ========================================
+           CALLOUTS
+           ======================================== */
+        .callout {
+            padding: 1.5rem 1.75rem;
+            border-radius: var(--radius-md);
+            margin: 1.5rem 0;
+            border-left: 4px solid;
+        }
+
+        .callout-warning {
+            background: rgba(251, 191, 36, 0.08);
+            border-left-color: var(--accent-yellow);
+        }
+
+        .callout-danger {
+            background: rgba(248, 113, 113, 0.08);
+            border-left-color: var(--accent-red);
+        }
+
+        .callout-info {
+            background: rgba(96, 165, 250, 0.08);
+            border-left-color: var(--accent-blue);
+        }
+
+        .callout-success {
+            background: rgba(74, 222, 128, 0.08);
+            border-left-color: var(--accent-green);
+        }
+
+        .callout-title {
+            font-weight: 600;
+            margin-bottom: 0.625rem;
+            color: var(--text-primary);
+            font-size: 1rem;
+        }
+
+        .callout-content {
+            font-size: 0.9375rem;
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+
+        /* ========================================
+           COMPANY PROFILES
+           ======================================== */
+        .company-header {
+            display: flex;
+            align-items: flex-start;
+            gap: 2.5rem;
+            margin-bottom: 3rem;
+            padding-bottom: 2.5rem;
+            border-bottom: 1px solid var(--border-color);
+            flex-wrap: wrap;
+        }
+
+        .company-logo {
+            width: 88px;
+            height: 88px;
+            border-radius: var(--radius-lg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.25rem;
+            font-weight: 700;
+            color: white;
+            flex-shrink: 0;
+        }
+
+        .company-logo.kalshi { background: var(--gradient-blue); box-shadow: var(--shadow-glow-blue); }
+        .company-logo.polymarket { background: var(--gradient-purple); box-shadow: var(--shadow-glow-purple); }
+        .company-logo.opinion { background: var(--gradient-orange); }
+
+        .company-info h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: var(--text-primary);
+        }
+
+        .company-info > p {
+            color: var(--text-secondary);
+            font-size: 1.0625rem;
+        }
+
+        .company-meta {
+            display: flex;
+            gap: 1.25rem;
+            flex-wrap: wrap;
+            margin-top: 1rem;
+        }
+
+        .company-meta-item {
+            font-size: 0.875rem;
+            color: var(--text-muted);
+        }
+
+        .company-meta-item strong {
+            color: var(--text-secondary);
+        }
+
+        .company-quick-stats {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
+            margin-left: auto;
+        }
+
+        @media (max-width: 1200px) {
+            .company-quick-stats {
+                grid-template-columns: repeat(2, 1fr);
+                margin-left: 0;
+                width: 100%;
+            }
+        }
+
+        .quick-stat {
+            text-align: center;
+            padding: 1.25rem;
+            background: var(--bg-elevated);
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border-color);
+            transition: all 0.2s ease;
+            cursor: pointer;
+        }
+
+        .quick-stat:hover {
+            border-color: var(--border-highlight);
+            transform: translateY(-2px);
+        }
+
+        .quick-stat-value {
+            font-size: 1.375rem;
+            font-weight: 700;
+            font-family: var(--font-mono);
+        }
+
+        .quick-stat-label {
+            font-size: 0.6875rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-top: 0.375rem;
+        }
+
+        /* ========================================
+           SUBSECTIONS
+           ======================================== */
+        .subsection {
+            margin-bottom: 3.5rem;
+        }
+
+        .subsection-title {
+            font-size: 1.375rem;
+            font-weight: 600;
+            margin-bottom: 1.25rem;
+            display: flex;
+            align-items: center;
+            gap: 0.875rem;
+            color: var(--text-primary);
+        }
+
+        .subsection-title::before {
+            content: '';
+            width: 4px;
+            height: 1.5rem;
+            background: var(--accent-blue);
+            border-radius: 2px;
+        }
+
+        /* ========================================
+           RISK MATRIX
+           ======================================== */
+        .risk-matrix {
+            display: grid;
+            grid-template-columns: 160px repeat(3, 1fr);
+            gap: 1px;
+            background: var(--border-color);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            margin-top: 2rem;
+        }
+
+        .risk-cell {
+            padding: 1.125rem 1.25rem;
+            background: var(--bg-card);
+            text-align: center;
+            font-size: 0.9375rem;
+            transition: background 0.2s ease;
+        }
+
+        .risk-cell:hover { background: var(--bg-card-hover); }
+
+        .risk-header {
+            background: var(--bg-elevated);
+            font-weight: 600;
+            color: var(--text-muted);
+            font-size: 0.8125rem;
+            text-transform: uppercase;
+            letter-spacing: 0.03em;
+        }
+
+        .risk-label {
+            text-align: left;
+            font-weight: 500;
+            color: var(--text-secondary);
+        }
+
+        .risk-low {
+            background: rgba(74, 222, 128, 0.1);
+            color: var(--accent-green-bright);
+            font-weight: 500;
+        }
+        .risk-medium {
+            background: rgba(251, 191, 36, 0.1);
+            color: var(--accent-yellow);
+            font-weight: 500;
+        }
+        .risk-high {
+            background: rgba(248, 113, 113, 0.1);
+            color: var(--accent-red-bright);
+            font-weight: 500;
+        }
+        .risk-critical {
+            background: rgba(248, 113, 113, 0.2);
+            color: var(--accent-red-bright);
+            font-weight: 600;
+        }
+
+        /* ========================================
+           CHARTS
+           ======================================== */
+        .chart-container {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-lg);
+            padding: 2rem;
+        }
+
+        .chart-title {
+            font-size: 1.0625rem;
+            font-weight: 600;
+            margin-bottom: 2rem;
+            color: var(--text-primary);
+        }
+
+        .bar-chart {
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+        }
+
+        .bar-item {
+            display: flex;
+            align-items: center;
+            gap: 1.25rem;
+        }
+
+        .bar-label {
+            width: 100px;
+            font-size: 0.9375rem;
+            color: var(--text-secondary);
+            font-weight: 500;
+            flex-shrink: 0;
+        }
+
+        .bar-track {
+            flex: 1;
+            height: 40px;
+            background: var(--bg-elevated);
+            border-radius: var(--radius-sm);
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+        }
+
+        .bar-fill {
+            height: 100%;
+            border-radius: var(--radius-sm);
+            display: flex;
+            align-items: center;
+            padding-left: 1rem;
+            font-size: 0.8125rem;
+            font-weight: 600;
+            color: white;
+            transition: width 1s ease-out;
+            font-family: var(--font-mono);
+        }
+
+        .bar-fill.blue { background: var(--gradient-blue); }
+        .bar-fill.purple { background: var(--gradient-purple); }
+        .bar-fill.orange { background: var(--gradient-orange); }
+        .bar-fill.green { background: var(--gradient-green); }
+
+        /* Donut Chart */
+        .donut-chart {
+            display: flex;
+            align-items: center;
+            gap: 4rem;
+            flex-wrap: wrap;
+        }
+
+        .donut-visual {
+            position: relative;
+            width: 220px;
+            height: 220px;
+        }
+
+        .donut-visual svg { transform: rotate(-90deg); }
+
+        .donut-center {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+        .donut-center-value {
+            font-size: 2.25rem;
+            font-weight: 700;
+            font-family: var(--font-mono);
+            color: var(--text-primary);
+        }
+
+        .donut-center-label {
+            font-size: 0.8125rem;
+            color: var(--text-muted);
+            margin-top: 0.25rem;
+        }
+
+        .donut-legend {
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            cursor: pointer;
+            padding: 0.5rem;
+            border-radius: var(--radius-sm);
+            transition: background 0.2s ease;
+        }
+
+        .legend-item:hover { background: var(--bg-highlight); }
+
+        .legend-dot {
+            width: 14px;
+            height: 14px;
+            border-radius: 4px;
+        }
+
+        .legend-dot.blue { background: var(--accent-blue); }
+        .legend-dot.purple { background: var(--accent-purple); }
+        .legend-dot.orange { background: var(--accent-orange); }
+
+        .legend-label {
+            font-size: 1rem;
+            color: var(--text-secondary);
+        }
+
+        .legend-value {
+            font-weight: 600;
+            font-family: var(--font-mono);
+            margin-left: auto;
+            color: var(--text-primary);
+        }
+
+        /* ========================================
+           TIMELINE
+           ======================================== */
+        .timeline {
+            position: relative;
+            padding-left: 2.5rem;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 8px;
+            bottom: 8px;
+            width: 2px;
+            background: linear-gradient(180deg, var(--accent-blue), var(--accent-purple));
+            border-radius: 1px;
+        }
+
+        .timeline-item {
+            position: relative;
+            padding-bottom: 2.25rem;
+        }
+
+        .timeline-item:last-child { padding-bottom: 0; }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -2.5rem;
+            top: 6px;
+            width: 12px;
+            height: 12px;
+            background: var(--accent-blue);
+            border-radius: 50%;
+            border: 3px solid var(--bg-primary);
+            box-shadow: 0 0 0 2px var(--accent-blue);
+        }
+
+        .timeline-date {
+            font-size: 0.8125rem;
+            color: var(--accent-blue-bright);
+            font-weight: 600;
+            margin-bottom: 0.375rem;
+            font-family: var(--font-mono);
+        }
+
+        .timeline-title {
+            font-weight: 600;
+            margin-bottom: 0.375rem;
+            color: var(--text-primary);
+            font-size: 1rem;
+        }
+
+        .timeline-desc {
+            font-size: 0.9375rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        /* ========================================
+           RECOMMENDATION BOX
+           ======================================== */
+        .recommendation-box {
+            background: var(--gradient-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-xl);
+            padding: 3rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .recommendation-box::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+        }
+
+        .recommendation-rating {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.02em;
+        }
+
+        .recommendation-rating.buy { color: var(--accent-green-bright); text-shadow: 0 0 40px rgba(74, 222, 128, 0.3); }
+        .recommendation-rating.hold { color: var(--accent-yellow); text-shadow: 0 0 40px rgba(251, 191, 36, 0.3); }
+        .recommendation-rating.sell { color: var(--accent-red-bright); }
+        .recommendation-rating.speculative { color: var(--accent-orange); text-shadow: 0 0 40px rgba(251, 146, 60, 0.3); }
+
+        .recommendation-label {
+            font-size: 1rem;
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+            font-weight: 500;
+        }
+
+        .recommendation-box > p {
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+
+        .recommendation-factors {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 1rem;
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border-color);
+        }
+
+        @media (max-width: 768px) {
+            .recommendation-factors { grid-template-columns: repeat(3, 1fr); }
+        }
+
+        .factor {
+            text-align: center;
+            cursor: pointer;
+            padding: 1rem;
+            border-radius: var(--radius-md);
+            transition: background 0.2s ease;
+        }
+
+        .factor:hover { background: var(--bg-highlight); }
+
+        .factor-score {
+            font-size: 1.75rem;
+            font-weight: 700;
+            font-family: var(--font-mono);
+        }
+
+        .factor-label {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-top: 0.375rem;
+        }
+
+        /* ========================================
+           FOOTER
+           ======================================== */
+        .footer {
+            padding: 5rem 2rem;
+            background: var(--bg-secondary);
+            border-top: 1px solid var(--border-color);
+        }
+
+        .footer-inner {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 3.5rem;
+            margin-bottom: 3.5rem;
+        }
+
+        .footer-section h4 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 1.25rem;
+            color: var(--text-primary);
+        }
+
+        .footer-section p, .footer-section li {
+            font-size: 0.9375rem;
+            color: var(--text-secondary);
+            line-height: 1.8;
+        }
+
+        .footer-section ul { list-style: none; }
+
+        .footer-section li { margin-bottom: 0.625rem; }
+
+        .footer-section a {
+            color: var(--accent-blue-bright);
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .footer-section a:hover {
+            color: var(--accent-blue);
+            text-decoration: underline;
+        }
+
+        .footer-bottom {
+            padding-top: 2.5rem;
+            border-top: 1px solid var(--border-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+
+        .footer-copyright {
+            font-size: 0.875rem;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+
+        .footer-disclaimer {
+            font-size: 0.8125rem;
+            color: var(--text-muted);
+            max-width: 600px;
+            line-height: 1.6;
+        }
+
+        /* ========================================
+           RESPONSIVE
+           ======================================== */
+        @media (max-width: 768px) {
+            .nav {
+                top: 8px;
+                left: 8px;
+                right: 8px;
+            }
+
+            .nav-links { display: none; }
+
+            .hero {
+                padding: 6rem 1.5rem 4rem;
+                min-height: auto;
+            }
+
+            .section { padding: 4rem 1.5rem; }
+
+            .company-header { flex-direction: column; }
+
+            .tabs {
+                width: 100%;
+                overflow-x: auto;
+                flex-wrap: nowrap;
+            }
+
+            .donut-chart { flex-direction: column; }
+
+            .cards-grid { grid-template-columns: 1fr; }
+
+            .risk-matrix {
+                font-size: 0.8125rem;
+                grid-template-columns: 120px repeat(3, 1fr);
+            }
+
+            .risk-cell { padding: 0.875rem 0.75rem; }
+
+            .recommendation-box { padding: 2rem 1.5rem; }
+
+            .recommendation-rating { font-size: 2.5rem; }
+        }
+
+        /* Print Styles */
+        @media print {
+            .nav, .tabs { display: none; }
+            .section { page-break-inside: avoid; padding: 2rem 0; }
+            body { background: white; color: black; }
+            .stat-card, .card, .callout { border: 1px solid #ddd; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav" role="navigation" aria-label="Main navigation">
+        <div class="nav-inner">
+            <a href="#" class="nav-logo" aria-label="Prediction Markets Report Home">
+                <div class="nav-logo-icon" aria-hidden="true">P</div>
+                <span>Prediction Markets Report</span>
+            </a>
+            <div class="nav-links">
+                <a href="#overview" class="nav-link active">Overview</a>
+                <a href="#companies" class="nav-link">Companies</a>
+                <a href="#comparison" class="nav-link">Comparison</a>
+                <a href="#regulatory" class="nav-link">Regulatory</a>
+                <a href="#investment" class="nav-link">Investment</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-inner">
+            <div class="hero-badge">
+                <span class="hero-badge-dot" aria-hidden="true"></span>
+                <span>Confidential Investment Memorandum</span>
+            </div>
+            <h1 class="hero-title">
+                <span class="hero-title-gradient">Prediction Markets</span><br>
+                Intelligence Report
+            </h1>
+            <p class="hero-subtitle">Comprehensive VC-style due diligence on the $44B prediction market industry. Covering Kalshi, Polymarket, and Opinion Labs.</p>
+
+            <div class="hero-stats">
+                <div class="stat-card blue">
+                    <div class="stat-label">2025 Market Volume</div>
+                    <div class="stat-value blue">$44B+</div>
+                    <div class="stat-change">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline></svg>
+                        +373% YoY
+                    </div>
+                </div>
+                <div class="stat-card green">
+                    <div class="stat-label">2026 Projection</div>
+                    <div class="stat-value green">$222.5B</div>
+                    <div class="stat-change">Piper Sandler estimate</div>
+                </div>
+                <div class="stat-card purple">
+                    <div class="stat-label">Combined Funding</div>
+                    <div class="stat-value purple">$4.1B+</div>
+                    <div class="stat-change">Across Big Three</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-label">Market Leader</div>
+                    <div class="stat-value orange">Kalshi</div>
+                    <div class="stat-change">66.4% market share</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Executive Summary -->
+    <section class="section" id="overview">
+        <div class="section-inner">
+            <div class="section-header">
+                <div class="section-label">Executive Summary</div>
+                <h2 class="section-title">The Prediction Market Opportunity</h2>
+                <p class="section-desc">The prediction market industry has experienced explosive growth, expanding from ~$9.3B in 2024 to $44B+ in 2025—a 5x increase in one year.</p>
+            </div>
+
+            <div class="callout callout-info">
+                <div class="callout-title">Key Insight: Market Share Reversal</div>
+                <div class="callout-content">
+                    A dramatic shift occurred in late 2025: Polymarket held 95% market share in December 2024, but Kalshi now commands 66% as of January 2026. Sports betting integration with Robinhood drove Kalshi's surge.
+                </div>
+            </div>
+
+            <div class="table-wrapper" style="margin-top: 2rem;">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Platform</th>
+                            <th>Founded</th>
+                            <th>HQ</th>
+                            <th>Total Funding</th>
+                            <th>Valuation</th>
+                            <th>2025 Volume</th>
+                            <th>Market Share</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="table-highlight">Kalshi</td>
+                            <td>2018</td>
+                            <td>New York</td>
+                            <td>$1.89B</td>
+                            <td>$11B</td>
+                            <td>$23.8B</td>
+                            <td><span class="badge badge-blue">66%</span></td>
+                        </tr>
+                        <tr>
+                            <td class="table-highlight">Polymarket</td>
+                            <td>2020</td>
+                            <td>New York</td>
+                            <td>$2.3B+</td>
+                            <td>$9B</td>
+                            <td>$12-15B</td>
+                            <td><span class="badge badge-purple">32%</span></td>
+                        </tr>
+                        <tr>
+                            <td class="table-highlight">Opinion Labs</td>
+                            <td>2023</td>
+                            <td>Hong Kong</td>
+                            <td>$5M</td>
+                            <td>~$50M</td>
+                            <td>$4-5B</td>
+                            <td><span class="badge badge-yellow">~2%</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Market Growth Chart -->
+            <div class="chart-container" style="margin-top: 2rem;">
+                <div class="chart-title">Market Volume Growth (2023-2026E)</div>
+                <div class="bar-chart">
+                    <div class="bar-item">
+                        <div class="bar-label">2023</div>
+                        <div class="bar-track">
+                            <div class="bar-fill blue" style="width: 2%;">$1B</div>
+                        </div>
+                    </div>
+                    <div class="bar-item">
+                        <div class="bar-label">2024</div>
+                        <div class="bar-track">
+                            <div class="bar-fill blue" style="width: 10%;">$9.3B</div>
+                        </div>
+                    </div>
+                    <div class="bar-item">
+                        <div class="bar-label">2025</div>
+                        <div class="bar-track">
+                            <div class="bar-fill green" style="width: 45%;">$44B</div>
+                        </div>
+                    </div>
+                    <div class="bar-item">
+                        <div class="bar-label">2026E</div>
+                        <div class="bar-track">
+                            <div class="bar-fill purple" style="width: 100%;">$222.5B</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Market Share Donut -->
+            <div class="chart-container" style="margin-top: 2rem;">
+                <div class="chart-title">Current Market Share (January 2026)</div>
+                <div class="donut-chart">
+                    <div class="donut-visual">
+                        <svg width="220" height="220" viewBox="0 0 220 220" aria-label="Market share donut chart: Kalshi 66%, Polymarket 32%, Opinion Labs 2%">
+                            <circle cx="110" cy="110" r="85" fill="none" stroke="#1f1f1f" stroke-width="28"/>
+                            <circle cx="110" cy="110" r="85" fill="none" stroke="#60a5fa" stroke-width="28"
+                                stroke-dasharray="352 534" stroke-dashoffset="0"/>
+                            <circle cx="110" cy="110" r="85" fill="none" stroke="#c084fc" stroke-width="28"
+                                stroke-dasharray="171 534" stroke-dashoffset="-352"/>
+                            <circle cx="110" cy="110" r="85" fill="none" stroke="#fb923c" stroke-width="28"
+                                stroke-dasharray="11 534" stroke-dashoffset="-523"/>
+                        </svg>
+                        <div class="donut-center">
+                            <div class="donut-center-value">$44B</div>
+                            <div class="donut-center-label">Total Volume</div>
+                        </div>
+                    </div>
+                    <div class="donut-legend">
+                        <div class="legend-item">
+                            <div class="legend-dot blue"></div>
+                            <div class="legend-label">Kalshi</div>
+                            <div class="legend-value">66%</div>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-dot purple"></div>
+                            <div class="legend-label">Polymarket</div>
+                            <div class="legend-value">32%</div>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-dot orange"></div>
+                            <div class="legend-label">Opinion Labs</div>
+                            <div class="legend-value">2%</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Company Profiles -->
+    <section class="section" id="companies">
+        <div class="section-inner">
+            <div class="section-header">
+                <div class="section-label">Deep Dive</div>
+                <h2 class="section-title">Company Profiles</h2>
+                <p class="section-desc">Comprehensive due diligence on each platform covering team, technology, business model, and risks.</p>
+            </div>
+
+            <div class="tabs" role="tablist">
+                <button class="tab active" data-tab="kalshi" role="tab" aria-selected="true" aria-controls="tab-kalshi">Kalshi</button>
+                <button class="tab" data-tab="polymarket" role="tab" aria-selected="false" aria-controls="tab-polymarket">Polymarket</button>
+                <button class="tab" data-tab="opinion" role="tab" aria-selected="false" aria-controls="tab-opinion">Opinion Labs</button>
+            </div>
+
+            <!-- Kalshi Profile -->
+            <div class="tab-content active" id="tab-kalshi" role="tabpanel">
+                <div class="company-header">
+                    <div class="company-logo kalshi" aria-hidden="true">K</div>
+                    <div class="company-info">
+                        <h2>Kalshi</h2>
+                        <p>The first CFTC-regulated prediction market exchange in the United States</p>
+                        <div class="company-meta">
+                            <span class="company-meta-item"><strong>Founded:</strong> 2018</span>
+                            <span class="company-meta-item"><strong>HQ:</strong> New York, NY</span>
+                            <span class="company-meta-item"><strong>Stage:</strong> Series E</span>
+                            <span class="company-meta-item"><span class="badge badge-green">CFTC Regulated</span></span>
+                        </div>
+                    </div>
+                    <div class="company-quick-stats">
+                        <div class="quick-stat">
+                            <div class="quick-stat-value" style="color: var(--accent-blue-bright);">$11B</div>
+                            <div class="quick-stat-label">Valuation</div>
+                        </div>
+                        <div class="quick-stat">
+                            <div class="quick-stat-value" style="color: var(--accent-green-bright);">$1.89B</div>
+                            <div class="quick-stat-label">Total Raised</div>
+                        </div>
+                        <div class="quick-stat">
+                            <div class="quick-stat-value" style="color: var(--accent-purple);">$263.5M</div>
+                            <div class="quick-stat-label">2025 Revenue</div>
+                        </div>
+                        <div class="quick-stat">
+                            <div class="quick-stat-value" style="color: var(--accent-orange);">66%</div>
+                            <div class="quick-stat-label">Market Share</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="subsection">
+                    <h3 class="subsection-title">Founders</h3>
+                    <div class="table-wrapper">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Role</th>
+                                    <th>Background</th>
+                                    <th>Stake</th>
+                                    <th>Net Worth</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="table-highlight">Tarek Mansour</td>
+                                    <td>CEO</td>
+                                    <td>MIT CS/Math, Goldman Sachs, Citadel, Palantir</td>
+                                    <td>~12%</td>
+                                    <td>$1.3B</td>
+                                </tr>
+                                <tr>
+                                    <td class="table-highlight">Luana Lopes Lara</td>
+                                    <td>Co-Founder</td>
+                                    <td>MIT CS/Math, Bridgewater, Citadel Securities, Five Rings</td>
+                                    <td>~12%</td>
+                                    <td>$1.3B</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p style="margin-top: 1rem; color: var(--text-secondary); font-size: 0.9375rem;">
+                        Both founders became billionaires at age 29. Luana is the world's youngest self-made female billionaire (Forbes, Dec 2025).
+                    </p>
+                </div>
+
+                <div class="subsection">
+                    <h3 class="subsection-title">Funding History</h3>
+                    <div class="table-wrapper">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Round</th>
+                                    <th>Date</th>
+                                    <th>Amount</th>
+                                    <th>Valuation</th>
+                                    <th>Lead Investor</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Y Combinator</td>
+                                    <td>W19</td>
+                                    <td>~$150K</td>
+                                    <td>—</td>
+                                    <td>YC</td>
+                                </tr>
+                                <tr>
+                                    <td>Seed</td>
+                                    <td>2020</td>
+                                    <td>~$6M</td>
+                                    <td>$9.1M</td>
+                                    <td>Sequoia</td>
+                                </tr>
+                                <tr>
+                                    <td>Series A</td>
+                                    <td>Feb 2021</td>
+                                    <td>$30M</td>
+                                    <td>~$100M</td>
+                                    <td>Sequoia</td>
+                                </tr>
+                                <tr>
+                                    <td>Series C</td>
+                                    <td>Jun 2025</td>
+                                    <td>$185M</td>
+                                    <td>$2B</td>
+                                    <td>Paradigm</td>
+                                </tr>
+                                <tr>
+                                    <td>Series D</td>
+                                    <td>Oct 2025</td>
+                                    <td>$300M</td>
+                                    <td>$5B</td>
+                                    <td>a16z, Sequoia</td>
+                                </tr>
+                                <tr>
+                                    <td class="table-highlight">Series E</td>
+                                    <td>Nov 2025</td>
+                                    <td class="table-highlight">$1B</td>
+                                    <td class="table-highlight">$11B</td>
+                                    <td>Paradigm</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="subsection">
+                    <h3 class="subsection-title">Business Model</h3>
+                    <div class="cards-grid">
+                        <div class="card">
+                            <h4 style="margin-bottom: 1rem; color: var(--text-primary); font-weight: 600;">Revenue Streams</h4>
+                            <ul style="list-style: none; color: var(--text-secondary); font-size: 0.9375rem; line-height: 2;">
+                                <li>• <strong style="color: var(--text-primary);">Transaction Fees:</strong> Maker-taker model, ~1.2% take rate</li>
+                                <li>• <strong style="color: var(--text-primary);">Kalshi Trading LLC:</strong> Affiliated market-making arm</li>
+                                <li>• <strong style="color: var(--text-primary);">Interest Income:</strong> Spread on customer deposits</li>
+                                <li>• <strong style="color: var(--text-primary);">Data Licensing:</strong> CNN, CNBC partnerships</li>
+                            </ul>
+                        </div>
+                        <div class="card">
+                            <h4 style="margin-bottom: 1rem; color: var(--text-primary); font-weight: 600;">Revenue Concentration</h4>
+                            <div class="callout callout-warning" style="margin: 0;">
+                                <div class="callout-title">89% Sports Dependency</div>
+                                <div class="callout-content">
+                                    89% of 2025 fee revenue comes from sports betting. A single adverse regulatory ruling could eliminate the majority of revenue.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="subsection">
+                    <h3 class="subsection-title">Critical Risks</h3>
+                    <div class="callout callout-danger">
+                        <div class="callout-title">Robinhood Dependency</div>
+                        <div class="callout-content">
+                            Robinhood contributes >50% of Kalshi's volume. Robinhood is acquiring MIAXdx (DCM/DCO) with Susquehanna—closing January 20, 2026—to launch their own prediction market exchange in 2026. This could eliminate Kalshi's largest distribution channel.
+                        </div>
+                    </div>
+                    <div class="table-wrapper" style="margin-top: 1rem;">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Risk</th>
+                                    <th>Severity</th>
+                                    <th>Probability</th>
+                                    <th>Mitigation</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Robinhood Dependency</td>
+                                    <td><span class="badge badge-red">CRITICAL</span></td>
+                                    <td>HIGH</td>
+                                    <td>Seeking new partners</td>
+                                </tr>
+                                <tr>
+                                    <td>State Regulatory Bans</td>
+                                    <td><span class="badge badge-red">CRITICAL</span></td>
+                                    <td>MEDIUM-HIGH</td>
+                                    <td>Legal appeals</td>
+                                </tr>
+                                <tr>
+                                    <td>Sports Revenue Concentration</td>
+                                    <td><span class="badge badge-red">CRITICAL</span></td>
+                                    <td>HIGH</td>
+                                    <td>Product diversification</td>
+                                </tr>
+                                <tr>
+                                    <td>Class Actions</td>
+                                    <td><span class="badge badge-yellow">HIGH</span></td>
+                                    <td>MEDIUM</td>
+                                    <td>Arbitration clauses</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="recommendation-box">
+                    <div class="recommendation-rating hold">HOLD</div>
+                    <div class="recommendation-label">Investment Recommendation</div>
+                    <p>
+                        High-growth opportunity with strong fundamentals, but existential risks from Robinhood dependency and regulatory uncertainty require resolution.
+                    </p>
+                    <div class="recommendation-factors">
+                        <div class="factor">
+                            <div class="factor-score" style="color: var(--accent-green-bright);">A</div>
+                            <div class="factor-label">Team</div>
+                        </div>
+                        <div class="factor">
+                            <div class="factor-score" style="color: var(--accent-green-bright);">A</div>
+                            <div class="factor-label">Market</div>
+                        </div>
+                        <div class="factor">
+                            <div class="factor-score" style="color: var(--accent-yellow);">B+</div>
+                            <div class="factor-label">Business</div>
+                        </div>
+                        <div class="factor">
+                            <div class="factor-score" style="color: var(--accent-red-bright);">C</div>
+                            <div class="factor-label">Regulatory</div>
+                        </div>
+                        <div class="factor">
+                            <div class="factor-score" style="color: var(--accent-yellow);">B</div>
+                            <div class="factor-label">Competition</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Polymarket Profile -->
+            <div class="tab-content" id="tab-polymarket" role="tabpanel">
+                <div class="company-header">
+                    <div class="company-logo polymarket" aria-hidden="true">P</div>
+                    <div class="company-info">
+                        <h2>Polymarket</h2>
+                        <p>The dominant crypto-native prediction market platform globally</p>
+                        <div class="company-meta">
+                            <span class="company-meta-item"><strong>Founded:</strong> 2020</span>
+                            <span class="company-meta-item"><strong>HQ:</strong> New York, NY</span>
+                            <span class="company-meta-item"><strong>Stage:</strong> Series B + ICE Investment</span>
+                            <span class="company-meta-item"><span class="badge badge-purple">Crypto-Native</span></span>
+                        </div>
+                    </div>
+                    <div class="company-quick-stats">
+                        <div class="quick-stat">
+                            <div class="quick-stat-value" style="color: var(--accent-purple);">$9B</div>
+                            <div class="quick-stat-label">Valuation</div>
+                        </div>
+                        <div class="quick-stat">
+                            <div class="quick-stat-value" style="color: var(--accent-green-bright);">$2.3B+</div>
+                            <div class="quick-stat-label">Total Raised</div>
+                        </div>
+                        <div class="quick-stat">
+                            <div class="quick-stat-value" style="color: var(--accent-yellow);">$0</div>
+                            <div class="quick-stat-label">Fee Revenue</div>
+                        </div>
+                        <div class="quick-stat">
+                            <div class="quick-stat-value" style="color: var(--accent-orange);">32%</div>
+                            <div class="quick-stat-label">Market Share</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="subsection">
+                    <h3 class="subsection-title">Leadership</h3>
+                    <div class="card" style="max-width: 500px;">
+                        <div class="card-header">
+                            <div class="card-icon polymarket">SC</div>
+                            <div>
+                                <div class="card-title">Shayne Coplan</div>
+                                <div class="card-subtitle">Founder & CEO</div>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <p>Founded Polymarket in 2020 at approximately age 22. College dropout with early interest in prediction markets and crypto. Media-savvy founder frequently cited in major publications.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="subsection">
+                    <h3 class="subsection-title">Regulatory Timeline</h3>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-date">January 2022</div>
+                            <div class="timeline-title">CFTC Settlement</div>
+                            <div class="timeline-desc">$1.4M civil penalty, blocked from US operations</div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-date">November 2024</div>
+                            <div class="timeline-title">FBI Raid</div>
+                            <div class="timeline-desc">Investigation into CEO, later closed with no charges (July 2025)</div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-date">July 2025</div>
+                            <div class="timeline-title">QCEX Acquisition</div>
+                            <div class="timeline-desc">Acquired CFTC-licensed exchange for $112M</div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-date">December 2025</div>
+                            <div class="timeline-title">US Re-launch</div>
+                            <div class="timeline-desc">CFTC-approved US operations resumed</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="recommendation-box">
+                    <div class="recommendation-rating buy" style="color: var(--accent-purple);">BUY</div>
+                    <div class="recommendation-label">Investment Recommendation</div>
+                    <p>
+                        Clear market leader in crypto-native prediction markets with proven product-market fit. POLY token airdrop and ICE partnership provide significant catalysts.
+                    </p>
+                    <div class="recommendation-factors">
+                        <div class="factor">
+                            <div class="factor-score" style="color: var(--accent-yellow);">B+</div>
+                            <div class="factor-label">Team</div>
+                        </div>
+                        <div class="factor">
+                            <div class="factor-score" style="color: var(--accent-green-bright);">A</div>
+                            <div class="factor-label">Technology</div>
+                        </div>
+                        <div class="factor">
+                            <div class="factor-score" style="color: var(--accent-yellow);">B</div>
+                            <div class="factor-label">Business</div>
+                        </div>
+                        <div class="factor">
+                            <div class="factor-score" style="color: var(--accent-yellow);">C</div>
+                            <div class="factor-label">Regulatory</div>
+                        </div>
+                        <div class="factor">
+                            <div class="factor-score" style="color: var(--accent-green-bright);">A</div>
+                            <div class="factor-label">Liquidity</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Opinion Labs Profile -->
+            <div class="tab-content" id="tab-opinion" role="tabpanel">
+                <div class="company-header">
+                    <div class="company-logo opinion" aria-hidden="true">O</div>
+                    <div class="company-info">
+                        <h2>Opinion Labs</h2>
+                        <p>Fast-emerging DeFi prediction market with AI-powered oracle technology</p>
+                        <div class="company-meta">
+                            <span class="company-meta-item"><strong>Founded:</strong> 2023</span>
+                            <span class="company-meta-item"><strong>HQ:</strong> Hong Kong</span>
+                            <span class="company-meta-item"><strong>Stage:</strong> Seed</span>
+                            <span class="company-meta-item"><span class="badge badge-orange">Pre-Token</span></span>
+                        </div>
+                    </div>
+                    <div class="company-quick-stats">
+                        <div class="quick-stat">
+                            <div class="quick-stat-value" style="color: var(--accent-orange);">~$50M</div>
+                            <div class="quick-stat-label">Est. Valuation</div>
+                        </div>
+                        <div class="quick-stat">
+                            <div class="quick-stat-value" style="color: var(--accent-green-bright);">$5M</div>
+                            <div class="quick-stat-label">Total Raised</div>
+                        </div>
+                        <div class="quick-stat">
+                            <div class="quick-stat-value" style="color: var(--accent-purple);">$10B</div>
+                            <div class="quick-stat-label">55-Day Volume</div>
+                        </div>
+                        <div class="quick-stat">
+                            <div class="quick-stat-value" style="color: var(--accent-yellow);">40%</div>
+                            <div class="quick-stat-label">Peak Share</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="callout callout-success">
+                    <div class="callout-title">Explosive Early Traction</div>
+                    <div class="callout-content">
+                        Opinion Labs reached $10B in trading volume within 55 days of mainnet launch, briefly capturing 40%+ market share. This represents exceptional product-market fit for an early-stage startup.
+                    </div>
+                </div>
+
+                <div class="subsection">
+                    <h3 class="subsection-title">Key Differentiators</h3>
+                    <div class="cards-grid">
+                        <div class="card">
+                            <h4 style="margin-bottom: 1rem; color: var(--text-primary); font-weight: 600;">AI-Powered Oracle (First of its kind)</h4>
+                            <p style="color: var(--text-secondary); font-size: 0.9375rem; line-height: 1.7;">
+                                Decentralized jury of AI models (Claude, ChatGPT, Grok) with Trusted Execution Environment for tamper-resistance. Human reviewers for factual verification.
+                            </p>
+                        </div>
+                        <div class="card">
+                            <h4 style="margin-bottom: 1rem; color: var(--text-primary); font-weight: 600;">Macro-Economic Focus</h4>
+                            <p style="color: var(--text-secondary); font-size: 0.9375rem; line-height: 1.7;">
+                                Primary focus on underserved economic markets: interest rates, inflation, employment data. Chainlink integration for institutional-grade data feeds.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="callout callout-warning">
+                    <div class="callout-title">Severely Underfunded</div>
+                    <div class="callout-content">
+                        Opinion Labs has raised only $5M compared to Kalshi's $1.89B and Polymarket's $2.3B. This 100x+ funding gap is a critical constraint for long-term competition.
+                    </div>
+                </div>
+
+                <div class="recommendation-box">
+                    <div class="recommendation-rating speculative">SPECULATIVE</div>
+                    <div class="recommendation-label">Investment Recommendation</div>
+                    <p>
+                        High-risk, high-reward opportunity. Exceptional early traction and genuine technical differentiation, but severely underfunded versus competition.
+                    </p>
+                    <div class="recommendation-factors">
+                        <div class="factor">
+                            <div class="factor-score" style="color: var(--accent-yellow);">B+</div>
+                            <div class="factor-label">Team</div>
+                        </div>
+                        <div class="factor">
+                            <div class="factor-score" style="color: var(--accent-green-bright);">A-</div>
+                            <div class="factor-label">Technology</div>
+                        </div>
+                        <div class="factor">
+                            <div class="factor-score" style="color: var(--accent-green-bright);">A</div>
+                            <div class="factor-label">Traction</div>
+                        </div>
+                        <div class="factor">
+                            <div class="factor-score" style="color: var(--accent-red-bright);">C</div>
+                            <div class="factor-label">Regulatory</div>
+                        </div>
+                        <div class="factor">
+                            <div class="factor-score" style="color: var(--accent-red-bright);">C+</div>
+                            <div class="factor-label">Funding</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Competitive Comparison -->
+    <section class="section" id="comparison">
+        <div class="section-inner">
+            <div class="section-header">
+                <div class="section-label">Analysis</div>
+                <h2 class="section-title">Competitive Comparison</h2>
+                <p class="section-desc">Side-by-side analysis of technology, business models, and strategic positioning.</p>
+            </div>
+
+            <div class="subsection">
+                <h3 class="subsection-title">Technology Comparison</h3>
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Feature</th>
+                                <th>Kalshi</th>
+                                <th>Polymarket</th>
+                                <th>Opinion Labs</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="table-highlight">Infrastructure</td>
+                                <td>Centralized (AWS)</td>
+                                <td>Polygon L2</td>
+                                <td>BNB Chain</td>
+                            </tr>
+                            <tr>
+                                <td class="table-highlight">Order Book</td>
+                                <td>Pure CLOB</td>
+                                <td>Hybrid CLOB</td>
+                                <td>On-chain CLOB</td>
+                            </tr>
+                            <tr>
+                                <td class="table-highlight">Oracle</td>
+                                <td>Centralized</td>
+                                <td>UMA + Chainlink</td>
+                                <td>AI Multi-agent</td>
+                            </tr>
+                            <tr>
+                                <td class="table-highlight">Settlement</td>
+                                <td>USD (bank rails)</td>
+                                <td>USDC on-chain</td>
+                                <td>Any ERC-20</td>
+                            </tr>
+                            <tr>
+                                <td class="table-highlight">Latency</td>
+                                <td>Sub-ms</td>
+                                <td>~2 seconds</td>
+                                <td>~3 seconds</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3 class="subsection-title">Funding Comparison</h3>
+                <div class="chart-container">
+                    <div class="chart-title">Total Capital Raised</div>
+                    <div class="bar-chart">
+                        <div class="bar-item">
+                            <div class="bar-label">Polymarket</div>
+                            <div class="bar-track">
+                                <div class="bar-fill purple" style="width: 100%;">$2.3B+</div>
+                            </div>
+                        </div>
+                        <div class="bar-item">
+                            <div class="bar-label">Kalshi</div>
+                            <div class="bar-track">
+                                <div class="bar-fill blue" style="width: 82%;">$1.89B</div>
+                            </div>
+                        </div>
+                        <div class="bar-item">
+                            <div class="bar-label">Opinion Labs</div>
+                            <div class="bar-track">
+                                <div class="bar-fill orange" style="width: 2%;">$5M</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Regulatory -->
+    <section class="section" id="regulatory">
+        <div class="section-inner">
+            <div class="section-header">
+                <div class="section-label">Legal Analysis</div>
+                <h2 class="section-title">Regulatory Landscape</h2>
+                <p class="section-desc">Federal and state regulatory status across all platforms.</p>
+            </div>
+
+            <div class="subsection">
+                <h3 class="subsection-title">Federal Regulatory Status</h3>
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Platform</th>
+                                <th>CFTC Status</th>
+                                <th>Key Milestone</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="table-highlight">Kalshi</td>
+                                <td><span class="badge badge-green">DCM Since 2020</span></td>
+                                <td>Won election contracts lawsuit (Sep 2024)</td>
+                            </tr>
+                            <tr>
+                                <td class="table-highlight">Polymarket</td>
+                                <td><span class="badge badge-green">Approved Nov 2025</span></td>
+                                <td>Acquired QCEX for $112M, re-entered US</td>
+                            </tr>
+                            <tr>
+                                <td class="table-highlight">Opinion Labs</td>
+                                <td><span class="badge badge-red">Not Registered</span></td>
+                                <td>No US regulatory pathway</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="callout callout-danger">
+                <div class="callout-title">38 State Attorneys General Opposition</div>
+                <div class="callout-content">
+                    38 state attorneys general have filed amicus briefs supporting state authority over prediction markets. Legal experts predict Supreme Court review by 2027.
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3 class="subsection-title">Key Dates to Monitor</h3>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-date">January 20, 2026</div>
+                        <div class="timeline-title">Massachusetts Ban Effect</div>
+                        <div class="timeline-desc">First state ban on Kalshi could take effect</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">February 11, 2026</div>
+                        <div class="timeline-title">Connecticut Oral Arguments</div>
+                        <div class="timeline-desc">Key hearing in federal court</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">March 2026</div>
+                        <div class="timeline-title">Polymarket ICE Integration</div>
+                        <div class="timeline-desc">Trading terminals gain prediction market access</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">2026-2027</div>
+                        <div class="timeline-title">Supreme Court Certiorari</div>
+                        <div class="timeline-desc">Potential landmark case on federal preemption</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Investment -->
+    <section class="section" id="investment">
+        <div class="section-inner">
+            <div class="section-header">
+                <div class="section-label">Recommendations</div>
+                <h2 class="section-title">Investment Analysis</h2>
+                <p class="section-desc">Risk-adjusted assessments and strategic recommendations.</p>
+            </div>
+
+            <div class="subsection">
+                <h3 class="subsection-title">Risk Matrix</h3>
+                <div class="risk-matrix">
+                    <div class="risk-cell risk-header">Risk Category</div>
+                    <div class="risk-cell risk-header">Kalshi</div>
+                    <div class="risk-cell risk-header">Polymarket</div>
+                    <div class="risk-cell risk-header">Opinion Labs</div>
+
+                    <div class="risk-cell risk-label">Regulatory</div>
+                    <div class="risk-cell risk-medium">Medium</div>
+                    <div class="risk-cell risk-medium">Medium</div>
+                    <div class="risk-cell risk-high">High</div>
+
+                    <div class="risk-cell risk-label">Technology</div>
+                    <div class="risk-cell risk-low">Low</div>
+                    <div class="risk-cell risk-medium">Medium</div>
+                    <div class="risk-cell risk-high">High</div>
+
+                    <div class="risk-cell risk-label">Competitive</div>
+                    <div class="risk-cell risk-low">Low</div>
+                    <div class="risk-cell risk-medium">Medium</div>
+                    <div class="risk-cell risk-high">High</div>
+
+                    <div class="risk-cell risk-label">Financial</div>
+                    <div class="risk-cell risk-low">Low</div>
+                    <div class="risk-cell risk-low">Low</div>
+                    <div class="risk-cell risk-critical">Critical</div>
+
+                    <div class="risk-cell risk-label">Execution</div>
+                    <div class="risk-cell risk-low">Low</div>
+                    <div class="risk-cell risk-low">Low</div>
+                    <div class="risk-cell risk-medium">Medium</div>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3 class="subsection-title">Investment Verdicts</h3>
+                <div class="cards-grid">
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-icon kalshi">K</div>
+                            <div>
+                                <div class="card-title">Kalshi</div>
+                                <div class="card-subtitle">Series E | $11B Valuation</div>
+                            </div>
+                        </div>
+                        <div style="text-align: center; margin: 1.5rem 0;">
+                            <div style="font-size: 2rem; font-weight: 800; color: var(--accent-yellow);">HOLD</div>
+                            <div style="font-size: 0.875rem; color: var(--text-muted);">Proceed with Caution</div>
+                        </div>
+                        <div class="card-content">
+                            <p><strong>Bull:</strong> Regulatory moat, profitable, 66% share</p>
+                            <p><strong>Bear:</strong> Robinhood dependency, state litigation, 89% sports</p>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-icon polymarket">P</div>
+                            <div>
+                                <div class="card-title">Polymarket</div>
+                                <div class="card-subtitle">Series B + ICE | $9B Valuation</div>
+                            </div>
+                        </div>
+                        <div style="text-align: center; margin: 1.5rem 0;">
+                            <div style="font-size: 2rem; font-weight: 800; color: var(--accent-purple);">BUY</div>
+                            <div style="font-size: 0.875rem; color: var(--text-muted);">Conditional Invest</div>
+                        </div>
+                        <div class="card-content">
+                            <p><strong>Bull:</strong> Deepest liquidity, ICE deal, POLY token</p>
+                            <p><strong>Bear:</strong> Zero revenue, security incidents, state litigation</p>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-icon opinion">O</div>
+                            <div>
+                                <div class="card-title">Opinion Labs</div>
+                                <div class="card-subtitle">Seed | ~$50M Valuation</div>
+                            </div>
+                        </div>
+                        <div style="text-align: center; margin: 1.5rem 0;">
+                            <div style="font-size: 2rem; font-weight: 800; color: var(--accent-orange);">SPECULATIVE</div>
+                            <div style="font-size: 0.875rem; color: var(--text-muted);">High Risk / High Reward</div>
+                        </div>
+                        <div class="card-content">
+                            <p><strong>Bull:</strong> AI oracle innovation, $10B in 55 days, YZi backing</p>
+                            <p><strong>Bear:</strong> $5M funding, no audit, pre-token</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h4>About This Report</h4>
+                    <p>This comprehensive due diligence report was compiled using extensive web research across team/funding, technology, market risks, and business analysis dimensions. Data current as of January 2026.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Key Sources</h4>
+                    <ul>
+                        <li><a href="https://sacra.com/c/kalshi/" target="_blank" rel="noopener noreferrer">Sacra - Kalshi</a></li>
+                        <li><a href="https://techcrunch.com" target="_blank" rel="noopener noreferrer">TechCrunch</a></li>
+                        <li><a href="https://www.cftc.gov" target="_blank" rel="noopener noreferrer">CFTC Filings</a></li>
+                        <li><a href="https://crunchbase.com" target="_blank" rel="noopener noreferrer">Crunchbase</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Methodology</h4>
+                    <p>This report synthesizes primary research from 4 parallel analysis workstreams covering product, technology, business model, and regulatory analysis.</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-copyright">
+                    Prediction Markets Intelligence Report | January 2026
+                </div>
+                <div class="footer-disclaimer">
+                    This report is for informational purposes only and does not constitute investment advice. The prediction market industry is rapidly evolving with significant regulatory uncertainty.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Tab functionality with ARIA support
+        document.querySelectorAll('.tab').forEach(tab => {
+            tab.addEventListener('click', () => {
+                const tabId = tab.dataset.tab;
+
+                // Update active tab and ARIA
+                document.querySelectorAll('.tab').forEach(t => {
+                    t.classList.remove('active');
+                    t.setAttribute('aria-selected', 'false');
+                });
+                tab.classList.add('active');
+                tab.setAttribute('aria-selected', 'true');
+
+                // Update active content
+                document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+                document.getElementById('tab-' + tabId).classList.add('active');
+            });
+
+            // Keyboard navigation
+            tab.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    tab.click();
+                }
+            });
+        });
+
+        // Navigation active state on scroll
+        const sections = document.querySelectorAll('section[id]');
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        const observerOptions = {
+            rootMargin: '-20% 0px -80% 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    navLinks.forEach(link => {
+                        link.classList.remove('active');
+                        if (link.getAttribute('href') === '#' + entry.target.id) {
+                            link.classList.add('active');
+                        }
+                    });
+                }
+            });
+        }, observerOptions);
+
+        sections.forEach(section => observer.observe(section));
+
+        // Smooth scroll for nav links
+        navLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const targetId = link.getAttribute('href').slice(1);
+                const target = document.getElementById(targetId);
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

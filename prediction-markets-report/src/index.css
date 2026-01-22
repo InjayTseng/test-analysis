@@ -1,0 +1,321 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Base styles - Light Mode */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-white text-slate-800 antialiased;
+    font-feature-settings: 'cv11', 'ss01';
+  }
+
+  ::selection {
+    @apply bg-accent-blue/20 text-slate-900;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-slate-100;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-slate-300 rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-slate-400;
+  }
+}
+
+/* Component styles */
+@layer components {
+  /* Card styles */
+  .card {
+    @apply bg-white border border-slate-200 rounded-xl p-6;
+    @apply shadow-card transition-all duration-300 ease-out;
+  }
+
+  .card-hover {
+    @apply hover:shadow-card-hover hover:border-slate-300;
+  }
+
+  .card-glow {
+    @apply relative overflow-hidden;
+  }
+
+  .card-glow::before {
+    content: '';
+    @apply absolute inset-0 opacity-0 transition-opacity duration-300;
+    background: radial-gradient(800px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+      rgba(37, 99, 235, 0.04), transparent 40%);
+  }
+
+  .card-glow:hover::before {
+    @apply opacity-100;
+  }
+
+  /* Glass morphism - light version */
+  .glass {
+    @apply bg-white/80 backdrop-blur-xl border border-slate-200;
+  }
+
+  /* Stat card */
+  .stat-card {
+    @apply card flex flex-col items-center text-center p-8;
+  }
+
+  .stat-value {
+    @apply text-4xl md:text-5xl font-bold bg-gradient-to-r from-slate-900 to-slate-700 bg-clip-text text-transparent;
+  }
+
+  .stat-label {
+    @apply text-sm text-slate-600 mt-2 uppercase tracking-wider;
+  }
+
+  /* Section styles */
+  .section {
+    @apply py-16 md:py-24;
+  }
+
+  .section-title {
+    @apply text-2xl md:text-3xl font-bold text-slate-900 mb-2;
+  }
+
+  .section-subtitle {
+    @apply text-slate-600 text-lg mb-8;
+  }
+
+  /* Tab styles */
+  .tab-button {
+    @apply px-6 py-3 text-sm font-medium text-slate-600 border-b-2 border-transparent;
+    @apply transition-all duration-200 cursor-pointer;
+    @apply hover:text-slate-900 hover:border-slate-300;
+  }
+
+  .tab-button.active {
+    @apply text-accent-blue border-accent-blue;
+  }
+
+  /* Badge styles */
+  .badge {
+    @apply inline-flex items-center px-3 py-1 rounded-full text-xs font-medium;
+  }
+
+  .badge-blue {
+    @apply bg-blue-50 text-accent-blue border border-blue-200;
+  }
+
+  .badge-green {
+    @apply bg-green-50 text-accent-green border border-green-200;
+  }
+
+  .badge-red {
+    @apply bg-red-50 text-accent-red border border-red-200;
+  }
+
+  .badge-yellow {
+    @apply bg-yellow-50 text-accent-yellow border border-yellow-200;
+  }
+
+  .badge-purple {
+    @apply bg-purple-50 text-accent-purple border border-purple-200;
+  }
+
+  /* Table styles */
+  .data-table {
+    @apply w-full border-collapse;
+  }
+
+  .data-table th {
+    @apply text-left text-xs uppercase tracking-wider text-slate-600 font-medium;
+    @apply py-4 px-4 border-b border-slate-200 bg-slate-50;
+  }
+
+  .data-table td {
+    @apply py-4 px-4 border-b border-slate-100 text-slate-700;
+  }
+
+  .data-table tbody tr {
+    @apply transition-colors duration-150;
+  }
+
+  .data-table tbody tr:hover {
+    @apply bg-slate-50;
+  }
+
+  /* Chart container */
+  .chart-container {
+    @apply card p-6;
+  }
+
+  .chart-title {
+    @apply text-lg font-semibold text-slate-900 mb-1;
+  }
+
+  .chart-subtitle {
+    @apply text-sm text-slate-600 mb-6;
+  }
+
+  /* Glow effects */
+  .glow-blue {
+    @apply shadow-glow-blue;
+  }
+
+  .glow-green {
+    @apply shadow-glow-green;
+  }
+
+  .glow-purple {
+    @apply shadow-glow-purple;
+  }
+
+  /* Risk matrix cell */
+  .risk-cell {
+    @apply w-full h-12 rounded flex items-center justify-center text-xs font-medium;
+    @apply transition-transform duration-200 hover:scale-105 cursor-default;
+  }
+
+  .risk-low {
+    @apply bg-green-50 text-accent-green border border-green-200;
+  }
+
+  .risk-medium {
+    @apply bg-yellow-50 text-accent-yellow border border-yellow-200;
+  }
+
+  .risk-high {
+    @apply bg-red-50 text-accent-red border border-red-200;
+  }
+
+  /* Timeline */
+  .timeline-item {
+    @apply relative pl-8 pb-8 border-l-2 border-slate-200 last:border-transparent last:pb-0;
+  }
+
+  .timeline-dot {
+    @apply absolute left-0 top-0 w-4 h-4 rounded-full -translate-x-1/2;
+    @apply bg-accent-blue border-4 border-white shadow-md;
+  }
+
+  /* Callout boxes */
+  .callout {
+    @apply p-4 rounded-lg border-l-4;
+  }
+
+  .callout-info {
+    @apply bg-blue-50 border-accent-blue text-slate-700;
+  }
+
+  .callout-warning {
+    @apply bg-yellow-50 border-accent-yellow text-slate-700;
+  }
+
+  .callout-success {
+    @apply bg-green-50 border-accent-green text-slate-700;
+  }
+
+  .callout-danger {
+    @apply bg-red-50 border-accent-red text-slate-700;
+  }
+
+  /* Gradient text */
+  .gradient-text {
+    @apply bg-gradient-to-r from-accent-blue via-accent-purple to-accent-cyan bg-clip-text text-transparent;
+  }
+
+  /* Button styles */
+  .btn {
+    @apply inline-flex items-center justify-center px-4 py-2 rounded-lg font-medium;
+    @apply transition-all duration-200 cursor-pointer;
+    @apply focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white;
+  }
+
+  .btn-primary {
+    @apply bg-accent-blue text-white hover:bg-blue-700;
+    @apply focus:ring-accent-blue;
+  }
+
+  .btn-secondary {
+    @apply bg-white border border-slate-300 text-slate-700 hover:bg-slate-50;
+    @apply focus:ring-slate-400;
+  }
+
+  /* Progress bar */
+  .progress-bar {
+    @apply h-2 bg-slate-100 rounded-full overflow-hidden;
+  }
+
+  .progress-fill {
+    @apply h-full rounded-full transition-all duration-500 ease-out;
+  }
+}
+
+/* Utility classes */
+@layer utilities {
+  /* Hide scrollbar but keep functionality */
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Text balance */
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  /* Animate on scroll */
+  .animate-on-scroll {
+    @apply opacity-0 translate-y-4 transition-all duration-500;
+  }
+
+  .animate-on-scroll.visible {
+    @apply opacity-100 translate-y-0;
+  }
+}
+
+/* Recharts custom styles - Light Mode */
+.recharts-default-tooltip {
+  @apply !bg-white !border-slate-200 !rounded-lg !shadow-xl;
+}
+
+.recharts-tooltip-label {
+  @apply !text-slate-900 !font-semibold !mb-2;
+}
+
+.recharts-tooltip-item {
+  @apply !text-slate-600;
+}
+
+.recharts-legend-item-text {
+  @apply !text-slate-600;
+}
+
+.recharts-cartesian-axis-tick-value {
+  @apply fill-slate-500;
+}
+
+.recharts-cartesian-grid line {
+  stroke: #e2e8f0;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

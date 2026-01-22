@@ -1,0 +1,6 @@
+{
+  "enabledPlugins": {
+    "voltagent-biz@voltagent-subagents": true,
+    "voltagent-research@voltagent-subagents": true
+  }
+}
