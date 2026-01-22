@@ -4,6 +4,7 @@ import {
   Hero,
   MarketOverview,
   CompanyProfiles,
+  ArchitectureDiagrams,
   CompetitiveAnalysis,
   InvestmentRecommendations,
   Outlook2026,
@@ -15,7 +16,7 @@ function App() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['overview', 'market', 'companies', 'analysis', 'outlook'];
+      const sections = ['overview', 'market', 'companies', 'architecture', 'analysis', 'outlook'];
       const scrollPosition = window.scrollY + 200;
 
       for (const section of sections) {
@@ -60,6 +61,7 @@ function App() {
         <Hero />
         <MarketOverview />
         <CompanyProfiles />
+        <ArchitectureDiagrams />
         <CompetitiveAnalysis />
         <InvestmentRecommendations />
         <Outlook2026 />

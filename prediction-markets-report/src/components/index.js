@@ -2,6 +2,7 @@ export { default as Navbar } from './Navbar';
 export { default as Hero } from './Hero';
 export { default as MarketOverview } from './MarketOverview';
 export { default as CompanyProfiles } from './CompanyProfiles';
+export { default as ArchitectureDiagrams } from './ArchitectureDiagrams';
 export { default as CompetitiveAnalysis } from './CompetitiveAnalysis';
 export { default as InvestmentRecommendations } from './InvestmentRecommendations';
 export { default as Outlook2026 } from './Outlook2026';

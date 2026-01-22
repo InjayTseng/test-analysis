@@ -5,6 +5,7 @@ const navItems = [
   { id: 'overview', label: 'Overview' },
   { id: 'market', label: 'Market' },
   { id: 'companies', label: 'Companies' },
+  { id: 'architecture', label: 'Architecture' },
   { id: 'analysis', label: 'Analysis' },
   { id: 'outlook', label: '2026 Outlook' },
 ];

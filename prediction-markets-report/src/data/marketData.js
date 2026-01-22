@@ -443,6 +443,135 @@ export const investmentRecommendations = [
   },
 ];
 
+// System Architecture Data (from blog: polymarket-vs-kalshi-vs-opinion-labs.md)
+export const architectureData = {
+  kalshi: {
+    name: 'Kalshi',
+    color: '#2563eb',
+    layers: [
+      {
+        name: 'User Interface',
+        components: ['Web App', 'Mobile App', 'Robinhood Integration'],
+        description: 'Multi-platform access for retail and institutional traders',
+      },
+      {
+        name: 'API Layer',
+        components: ['REST API', 'WebSocket', 'FIX 4.4 Protocol'],
+        description: 'Institutional-grade connectivity for HFT and trading systems',
+      },
+      {
+        name: 'Matching Engine',
+        components: ['Continuous Double Auction', 'Sub-250ms Execution', '3,500+ Markets'],
+        description: 'High-performance order matching with institutional latency',
+      },
+      {
+        name: 'Clearinghouse',
+        components: ['Kalshi Klear LLC', 'CFTC-Registered DCO', 'Real-time Settlement'],
+        description: 'Proprietary clearing infrastructure (approved Aug 2024)',
+      },
+      {
+        name: 'Infrastructure',
+        components: ['AWS Cloud-Native', 'Kubernetes', 'Docker'],
+        description: 'Enterprise-grade cloud infrastructure',
+      },
+      {
+        name: 'Security',
+        components: ['NIST 800 Compliance', 'Universal Encryption', 'MFA'],
+        description: 'Bank-grade security standards',
+      },
+    ],
+    techStack: {
+      frontend: ['Web App', 'Mobile App', 'Robinhood SDK'],
+      backend: ['REST', 'WebSocket', 'FIX 4.4'],
+      infrastructure: ['AWS', 'Kubernetes', 'Docker'],
+      settlement: 'USD (Kalshi Klear)',
+      oracle: 'Centralized (Internal Arbiter)',
+    },
+  },
+  polymarket: {
+    name: 'Polymarket',
+    color: '#9333ea',
+    layers: [
+      {
+        name: 'User Interface',
+        components: ['React', 'TypeScript', 'Web3 Wallet'],
+        description: 'Modern web app with crypto wallet integration',
+      },
+      {
+        name: 'Backend Services',
+        components: ['REST API', 'WebSocket', 'Off-chain Order Matching'],
+        description: 'Hybrid architecture for speed and decentralization',
+      },
+      {
+        name: 'Polygon Blockchain',
+        components: ['Gnosis CTF (ERC-1155)', 'USDC Settlements', 'Sub-dollar Tx Costs'],
+        description: 'Layer 2 scaling for fast, cheap transactions',
+      },
+      {
+        name: 'UMA Oracle System',
+        components: ['Optimistic Oracle', 'Decentralized Dispute Resolution', '2hr Liveness'],
+        description: 'Trustless outcome resolution via economic incentives',
+      },
+    ],
+    techStack: {
+      frontend: ['React', 'TypeScript', 'Web3.js', 'ethers.js'],
+      backend: ['Node.js', 'REST', 'WebSocket'],
+      blockchain: ['Polygon (L2)', 'ERC-1155'],
+      settlement: 'USDC (On-chain)',
+      oracle: 'UMA Optimistic Oracle',
+    },
+  },
+  opinionLabs: {
+    name: 'Opinion Labs',
+    color: '#16a34a',
+    layers: [
+      {
+        name: 'Opinion.Trade',
+        components: ['Live Prediction Exchange', 'Permissionless Markets', 'AI Market Creation'],
+        description: 'Real-world market trading platform',
+      },
+      {
+        name: 'Opinion AI Oracle',
+        components: ['Claude', 'ChatGPT', 'Grok'],
+        description: 'Multi-agent AI jury system for outcome resolution',
+      },
+      {
+        name: 'Security Layer',
+        components: ['TEE (Trusted Execution)', 'Human Reviewer Oversight', 'Consensus Mechanism'],
+        description: 'Hardware security with human verification layer',
+      },
+      {
+        name: 'Chainlink Integration',
+        components: ['Verified Data Feeds', 'Macroeconomic Indicators', 'On-chain Verification'],
+        description: 'Decentralized oracle for economic data',
+      },
+      {
+        name: 'BNB Chain',
+        components: ['Full On-chain CLOB', 'Fast Finality (~2s)', 'Low Gas Fees'],
+        description: 'Native blockchain infrastructure',
+      },
+    ],
+    techStack: {
+      frontend: ['Web App', 'Wallet Connect'],
+      backend: ['On-chain CLOB'],
+      blockchain: ['BNB Chain'],
+      settlement: 'Crypto (On-chain)',
+      oracle: 'AI Multi-Agent + Chainlink',
+    },
+  },
+};
+
+// Architecture Comparison Table
+export const architectureComparisonData = [
+  { feature: 'Architecture', kalshi: 'Centralized', polymarket: 'Hybrid (Off-chain + L2)', opinionLabs: 'Full On-chain CLOB' },
+  { feature: 'Oracle', kalshi: 'Centralized Arbiter', polymarket: 'UMA Optimistic Oracle', opinionLabs: 'AI Multi-Agent + Chainlink' },
+  { feature: 'Market Creation', kalshi: 'CFTC-approved Only', polymarket: 'Curated', opinionLabs: 'Permissionless + AI' },
+  { feature: 'Blockchain', kalshi: 'Traditional Rails (USD)', polymarket: 'Polygon (L2)', opinionLabs: 'BNB Chain' },
+  { feature: 'Settlement', kalshi: 'USD (Kalshi Klear)', polymarket: 'USDC (On-chain)', opinionLabs: 'Crypto (Native)' },
+  { feature: 'Latency', kalshi: '<250ms', polymarket: '~2s', opinionLabs: '~2s' },
+  { feature: 'API Protocols', kalshi: 'REST, WebSocket, FIX 4.4', polymarket: 'REST, WebSocket, Web3', opinionLabs: 'Web3, On-chain' },
+];
+
 // 2026 Outlook Metrics (Updated January 2026)
 // Note: Market projections vary widely. Base case is Piper Sandler analyst consensus.
 export const outlook2026 = {
