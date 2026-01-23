@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AGI 之後的世界：Demis Hassabis 與 Dario Amodei 於 2026 達沃斯論壇</title>
+    <style>
+        :root {
+            --primary: #1a1a2e;
+            --secondary: #16213e;
+            --accent: #0f3460;
+            --highlight: #e94560;
+            --text: #eaeaea;
+            --text-muted: #a0a0a0;
+            --bg: #0f0f1a;
+            --card-bg: #1a1a2e;
+            --border: #2a2a4a;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Noto Sans TC", "Microsoft JhengHei", "PingFang TC", sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.8;
+            font-size: 17px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        header {
+            text-align: center;
+            padding: 4rem 2rem;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+            border-bottom: 3px solid var(--highlight);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            background: linear-gradient(90deg, #fff, var(--highlight));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .subtitle {
+            font-size: 1.3rem;
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+        }
+
+        .meta {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1.5rem;
+            font-size: 0.95rem;
+            color: var(--text-muted);
+        }
+
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .meta-label {
+            color: var(--highlight);
+            font-weight: 600;
+        }
+
+        nav {
+            background: var(--secondary);
+            padding: 1.5rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid var(--border);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.5rem 1.5rem;
+        }
+
+        nav a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--highlight);
+        }
+
+        main {
+            padding: 3rem 0;
+        }
+
+        section {
+            margin-bottom: 4rem;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            color: var(--highlight);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--border);
+        }
+
+        h3 {
+            font-size: 1.3rem;
+            color: #fff;
+            margin: 2rem 0 1rem;
+        }
+
+        p {
+            margin-bottom: 1.2rem;
+            text-align: justify;
+        }
+
+        blockquote {
+            background: var(--card-bg);
+            border-left: 4px solid var(--highlight);
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 0 8px 8px 0;
+            font-style: italic;
+        }
+
+        blockquote p {
+            margin: 0;
+        }
+
+        .summary-box {
+            background: linear-gradient(135deg, var(--accent) 0%, var(--secondary) 100%);
+            padding: 2rem;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+            border: 1px solid var(--border);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            background: var(--card-bg);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        th, td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid var(--border);
+        }
+
+        th {
+            background: var(--accent);
+            color: #fff;
+            font-weight: 600;
+        }
+
+        tr:hover {
+            background: rgba(233, 69, 96, 0.1);
+        }
+
+        ul, ol {
+            margin: 1rem 0 1.5rem 1.5rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        strong {
+            color: var(--highlight);
+        }
+
+        a {
+            color: #4dabf7;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        a:hover {
+            color: var(--highlight);
+            text-decoration: underline;
+        }
+
+        .card {
+            background: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin: 1.5rem 0;
+            border: 1px solid var(--border);
+        }
+
+        .card-title {
+            font-size: 1.1rem;
+            color: var(--highlight);
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .highlight-box {
+            background: rgba(233, 69, 96, 0.1);
+            border: 1px solid var(--highlight);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+        }
+
+        .sources-section {
+            background: var(--secondary);
+            padding: 2rem;
+            border-radius: 12px;
+        }
+
+        .sources-section h3 {
+            color: var(--highlight);
+            margin-top: 1.5rem;
+        }
+
+        .sources-section h3:first-child {
+            margin-top: 0;
+        }
+
+        .sources-section ul {
+            margin-left: 0;
+            list-style: none;
+        }
+
+        .sources-section li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .sources-section li:last-child {
+            border-bottom: none;
+        }
+
+        footer {
+            text-align: center;
+            padding: 3rem 2rem;
+            background: var(--secondary);
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            border-top: 1px solid var(--border);
+        }
+
+        .quote-grid {
+            display: grid;
+            gap: 1rem;
+        }
+
+        .quote-card {
+            background: var(--card-bg);
+            padding: 1.2rem;
+            border-radius: 8px;
+            border-left: 3px solid var(--highlight);
+        }
+
+        .quote-speaker {
+            color: var(--highlight);
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .quote-text {
+            font-style: italic;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            .container {
+                padding: 1rem;
+            }
+
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            table {
+                font-size: 0.9rem;
+            }
+
+            th, td {
+                padding: 0.7rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>AGI 之後的世界</h1>
+            <p class="subtitle">Demis Hassabis 與 Dario Amodei 於 2026 達沃斯論壇</p>
+            <div class="meta">
+                <div class="meta-item">
+                    <span class="meta-label">日期：</span>
+                    <span>2026 年 1 月</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label">活動：</span>
+                    <span>世界經濟論壇年會</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label">議程：</span>
+                    <span>「AGI 之後的那一天」</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label">主持人：</span>
+                    <span>Zanny Minton Beddoes</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#summary">執行摘要</a></li>
+            <li><a href="#timeline">AGI 時程</a></li>
+            <li><a href="#jobs">就業影響</a></li>
+            <li><a href="#safety">安全風險</a></li>
+            <li><a href="#geopolitics">地緣政治</a></li>
+            <li><a href="#vision">後 AGI 願景</a></li>
+            <li><a href="#quotes">重點語錄</a></li>
+            <li><a href="#sources">資料來源</a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+        <section id="summary">
+            <h2>執行摘要</h2>
+            <div class="summary-box">
+                <p>在 2026 年達沃斯論壇上，人工智慧領域最具影響力的兩位人物——<strong>Demis Hassabis</strong>（Google DeepMind 執行長、2024 年諾貝爾獎得主）與 <strong>Dario Amodei</strong>（Anthropic 執行長）——時隔一年首次同台公開對話。儘管兩人領導的公司在 AGI 競賽中互為競爭對手，他們卻達成了驚人的共識：</p>
+            </div>
+            <blockquote>
+                <p>「這一切發生的速度比大多數人意識到的更快，衝擊將會非常劇烈，而我們把事情做對的時間窗口正在縮小。」</p>
+            </blockquote>
+        </section>
+
+        <section id="timeline">
+            <h2>1. AGI 時程預測</h2>
+
+            <h3>核心分歧</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>領導者</th>
+                        <th>AGI 時程</th>
+                        <th>信心程度</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Dario Amodei</strong></td>
+                        <td>2026-2027 年</td>
+                        <td>「很難想像會花更長時間」</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Demis Hassabis</strong></td>
+                        <td>5-10 年（2030-2035 年）</td>
+                        <td>十年內有 50% 機率實現</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Dario Amodei 的立場</h3>
+            <p>Amodei 在達沃斯發表了積極的預測：</p>
+            <blockquote>
+                <p>「我不認為需要很長時間。很難想像會花更多時間……我比以往任何時候都更有信心，我們在未來 2-3 年內就會接近強大的能力。」</p>
+            </blockquote>
+
+            <div class="card">
+                <div class="card-title">Anthropic 官方立場（2025 年 3 月 OSTP 提交文件）</div>
+                <p>「我們預期強大的 AI 系統將在 2026 年底或 2027 年初出現」，具備「在大多數學科領域達到或超越諾貝爾獎得主水準的智識能力」。</p>
+            </div>
+
+            <h3>Demis Hassabis 的立場</h3>
+            <p>Hassabis 保持較為謹慎的看法：</p>
+            <blockquote>
+                <p>「或許我們還需要一兩個重大突破才能達到 AGI……目前的系統距離人類水準的通用人工智慧還很遠。」</p>
+            </blockquote>
+
+            <p>他指出當前系統缺失的能力：</p>
+            <ul>
+                <li>從少量範例學習的能力</li>
+                <li>不發生災難性遺忘的持續學習</li>
+                <li>更好的長期記憶</li>
+                <li>改進的推理與規劃能力</li>
+                <li>對物理世界的理解</li>
+                <li><strong>世界模型（World Models）</strong> ——關鍵的突破需求</li>
+            </ul>
+
+            <h3>他們如何定義 AGI</h3>
+
+            <div class="card">
+                <div class="card-title">Amodei 的定義（「強大 AI」）</div>
+                <ul>
+                    <li>在大多數領域比諾貝爾獎得主更聰明</li>
+                    <li>完整的人類等效介面（文字、音訊、影片）</li>
+                    <li>端到端任務完成</li>
+                    <li>「資料中心裡的天才國度」</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <div class="card-title">Hassabis 的定義（科學發現能力）</div>
+                <ul>
+                    <li><strong>愛因斯坦測試：</strong> AI 能否在只有 1900 年資訊的情況下發明廣義相對論？</li>
+                    <li>新假說生成，而非僅證明現有假說</li>
+                    <li><strong>遊戲發明測試：</strong> 它能否發明一個像圍棋一樣優雅的遊戲？</li>
+                    <li>沒有「參差智能」（不一致的表現）</li>
+                </ul>
+            </div>
+
+            <h3>預測的演變</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>時期</th>
+                        <th>Amodei</th>
+                        <th>Hassabis</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>2024 年 10 月</td>
+                        <td>「可能最早在 2026 年」</td>
+                        <td>「最快 10 年」</td>
+                    </tr>
+                    <tr>
+                        <td>2025 年 3 月</td>
+                        <td>「2026 年底或 2027 年初」</td>
+                        <td>「五到十年」</td>
+                    </tr>
+                    <tr>
+                        <td>2026 年 1 月</td>
+                        <td>「很難想像更久」</td>
+                        <td>「需要一兩個突破」</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="jobs">
+            <h2>2. 對就業與軟體開發的影響</h2>
+
+            <h3>Amodei 的驚人預測</h3>
+            <blockquote>
+                <p>「我們可能距離模型能端到端完成軟體工程師所有工作只有 6-12 個月。」</p>
+            </blockquote>
+            <blockquote>
+                <p>「我在 Anthropic 有工程師說，我不再寫任何程式碼了。我只是讓模型寫程式碼，我來編輯它。」</p>
+            </blockquote>
+
+            <div class="highlight-box">
+                <strong>時程預測：</strong>
+                <ul>
+                    <li><strong>6-12 個月內：</strong> AI 執行大部分/全部程式設計工作</li>
+                    <li><strong>2 年內：</strong> AI 達到「諾貝爾獎水準」的科學研究</li>
+                    <li><strong>5 年內：</strong> 50% 的初階白領工作消失</li>
+                </ul>
+            </div>
+
+            <h3>Hassabis 談就業衝擊</h3>
+            <blockquote>
+                <p>「我們將在今年 [2026 年] 開始看到 AI 影響實習以及初階和基層工作。」</p>
+            </blockquote>
+            <p>然而，Hassabis 對新機會保持樂觀：</p>
+            <blockquote>
+                <p>「未來五年是正常的技術發展，一些工作會消失，但會創造出新的、可能更有價值的工作。」</p>
+            </blockquote>
+            <p>他給學生的建議：</p>
+            <blockquote>
+                <p>「如果我現在要對一班大學生說話，我會告訴他們要極度精通這些工具。」</p>
+            </blockquote>
+
+            <h3>業界驗證</h3>
+            <ul>
+                <li><strong>微軟執行長 Satya Nadella：</strong> AI 現在撰寫微軟 20-30% 的內部程式碼</li>
+                <li><strong>Salesforce 執行長 Marc Benioff：</strong> 公司在 2025 年停止招聘新的軟體工程師</li>
+                <li><strong>Claude Opus 4.5：</strong> 在 SWE-bench Verified 達到 80.9%；在 Anthropic 工程考試中得分高於任何人類</li>
+            </ul>
+
+            <h3>「第零世界」警告</h3>
+            <p>Amodei 警告 AI 利益的集中：</p>
+            <blockquote>
+                <p>「噩夢場景是出現一個『第零世界』國家，大約 700 萬人在矽谷，300 萬人散布各處，形成自己的經濟體，與世界脫鉤或斷開連結。」</p>
+            </blockquote>
+
+            <h3>業界領袖反應</h3>
+            <ul>
+                <li><strong>Jamie Dimon（摩根大通執行長）：</strong> 「如果必須這樣做 [禁止大規模 AI 裁員] 來拯救社會，我們會同意。」警告可能出現「公民動亂」。</li>
+                <li><strong>Larry Fink（貝萊德執行長）：</strong> 「如果 AI 對白領工作者造成的影響像全球化對藍領工作者那樣，其他人會怎樣？」</li>
+                <li><strong>Kristalina Georgieva（IMF）：</strong> 形容 AI 是衝擊勞動市場的「海嘯」，指出「40% 的工作受到 AI 影響」。</li>
+            </ul>
+        </section>
+
+        <section id="safety">
+            <h2>3. AI 安全與存在性風險</h2>
+
+            <h3>對「末日論」的立場</h3>
+            <p>兩位領導者明確拒絕宿命論，同時承認嚴重風險。</p>
+
+            <blockquote>
+                <p><strong>Amodei：</strong>「我一直對末日論持懷疑態度，就是那種『我們完蛋了，什麼都做不了』的論調……這是一個風險，如果我們共同努力，是可以解決的。」</p>
+            </blockquote>
+            <blockquote>
+                <p><strong>Hassabis：</strong>「我非常相信人類的創造力。但問題是，要有時間、專注力，以及所有最優秀的頭腦合作來解決這些問題。」</p>
+            </blockquote>
+
+            <h3>強調的具體風險</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>風險類別</th>
+                        <th>詳情</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>存在性風險</strong></td>
+                        <td>「精靈無法被放回瓶中」（Hassabis）</td>
+                    </tr>
+                    <tr>
+                        <td><strong>基礎設施</strong></td>
+                        <td>針對能源/水系統的網路恐怖攻擊「幾乎已經在發生」</td>
+                    </tr>
+                    <tr>
+                        <td><strong>經濟</strong></td>
+                        <td>嚴重的就業衝擊快於社會適應速度</td>
+                    </tr>
+                    <tr>
+                        <td><strong>自主性</strong></td>
+                        <td>代理型 AI 系統在壞人手中變得危險</td>
+                    </tr>
+                    <tr>
+                        <td><strong>地緣政治</strong></td>
+                        <td>如果威權國家獲得 AGI，「1984 場景，或更糟」</td>
+                    </tr>
+                    <tr>
+                        <td><strong>欺騙</strong></td>
+                        <td>AI 模型展現欺騙能力</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>安全方法</h3>
+            <div class="card">
+                <div class="card-title">Google DeepMind - 前沿安全框架</div>
+                <ul>
+                    <li>關鍵能力等級（CCLs）</li>
+                    <li>欺騙性對齊檢測</li>
+                    <li>自動化監控系統</li>
+                    <li>責任與安全委員會</li>
+                    <li>AGI 安全委員會（由共同創辦人 Shane Legg 領導）</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <div class="card-title">Anthropic - 負責任擴展政策</div>
+                <ul>
+                    <li>AI 安全等級（ASL-1 到 ASL-3）</li>
+                    <li>憲政 AI 框架</li>
+                    <li>機制可解釋性研究</li>
+                    <li>Claude Opus 4 啟動 ASL-3</li>
+                </ul>
+            </div>
+
+            <h3>可解釋性競賽</h3>
+            <p>Amodei 視可解釋性為關鍵的科學突破：</p>
+            <blockquote>
+                <p>「我們正處於可解釋性與模型智能之間的競賽。」</p>
+            </blockquote>
+            <p>最近的進展讓研究人員感覺「即將大幅突破可解釋性」，在 5-10 年內有望實現「AI 的 MRI」。</p>
+
+            <h3>對監管的看法</h3>
+            <blockquote>
+                <p><strong>Amodei：</strong>「這些決定由少數公司、少數人做出，讓我深感不安。」</p>
+            </blockquote>
+            <blockquote>
+                <p><strong>Hassabis：</strong>「控制 AI 的規則只有在大多數國家同意時才有效，而這越來越困難……但必須是國際性的。」</p>
+            </blockquote>
+        </section>
+
+        <section id="geopolitics">
+            <h2>4. 地緣政治 AI 競爭</h2>
+
+            <h3>為何無法放慢腳步</h3>
+            <blockquote>
+                <p><strong>Amodei 的解釋：</strong>「我們無法放慢的原因是，地緣政治對手正以相似的速度建構相同的技術。很難達成一個可執行的協議，讓他們放慢而我們也放慢。」</p>
+            </blockquote>
+            <blockquote>
+                <p>「我更喜歡 Demis 的時程表。我希望我們有 5 到 10 年 [在 AGI 之前]……但如果我們能不賣晶片，那這就不是美中競爭的問題了。」</p>
+            </blockquote>
+
+            <h3>美中 AI 競爭</h3>
+
+            <div class="highlight-box">
+                <p><strong>Amodei 的立場（緊迫關切）：</strong></p>
+                <p>關於川普政府允許 Nvidia 晶片銷售給中國的決定：</p>
+                <blockquote>
+                    <p>「我認為這太瘋狂了。這有點像把核武賣給北韓，然後炫耀波音製造了外殼。」</p>
+                </blockquote>
+                <blockquote>
+                    <p>「不賣晶片給中國是我們能做的最重要的事之一，以確保我們有時間處理這一切。」</p>
+                </blockquote>
+            </div>
+
+            <p><strong>Hassabis 的立場（較為溫和）：</strong></p>
+            <blockquote>
+                <p>「[中國 AI 公司] 非常擅長追趕到前沿在哪裡……但我認為他們還沒有展示出能在前沿之外創新的能力。」</p>
+            </blockquote>
+            <p>估計中國實驗室<strong>落後 6 個月</strong>（明顯短於先前引用的 18-24 個月差距）。</p>
+            <blockquote>
+                <p>「發明某樣東西比複製它大約難 100 倍。」</p>
+            </blockquote>
+
+            <h3>晶片出口爭議</h3>
+            <p>川普政府 2026 年 1 月 14 日決定的條件：</p>
+            <ul>
+                <li>第三方測試實驗室驗證</li>
+                <li>中國不能獲得超過美國客戶總晶片銷量的 50%</li>
+                <li>Nvidia 必須證明有足夠的美國供應</li>
+                <li>中國客戶必須實施安全程序</li>
+                <li>25% 的收入歸美國政府</li>
+            </ul>
+            <p><strong>國會反應：</strong> 共和黨議員提出「AI 監督法案」以監督晶片出口。</p>
+
+            <h3>歐洲的位置</h3>
+            <blockquote>
+                <p><strong>Satya Nadella（微軟）：</strong>「僅僅達到歐洲內部標準是不夠的……真正的創新必須能在全球市場站穩腳步。」</p>
+            </blockquote>
+            <blockquote>
+                <p><strong>Jensen Huang（NVIDIA）：</strong>「機器人技術對歐洲國家來說是千載難逢的機會。」</p>
+            </blockquote>
+            <p>然而，歐洲面臨包括高能源成本和人才限制等挑戰。</p>
+        </section>
+
+        <section id="vision">
+            <h2>5. 後 AGI 願景</h2>
+
+            <h3>「未知領域」</h3>
+            <blockquote>
+                <p><strong>Hassabis 的核心警告：</strong>「AGI 到來之後，我們將進入未知領域」，指向超越純粹經濟層面的意義與目的問題。</p>
+            </blockquote>
+            <blockquote>
+                <p>「五到十年並不是很長的時間。」</p>
+            </blockquote>
+
+            <h3>意義與目的的問題</h3>
+            <blockquote>
+                <p><strong>Hassabis：</strong>「我們能否在全球公平且廣泛地分配生產力收益？在那之後還有一個問題，關於意義和目的。所以這是下一個哲學問題，我認為我們需要一些偉大的新哲學家今天就開始思考。」</p>
+            </blockquote>
+            <blockquote>
+                <p><strong>Amodei：</strong> 人類能否在其「技術青春期」中倖存而不自我毀滅，取決於接下來幾年如何利用。</p>
+            </blockquote>
+
+            <h3>預期的科學突破</h3>
+            <div class="card">
+                <div class="card-title">「壓縮的 21 世紀」（Amodei）</div>
+                <blockquote>
+                    <p>「AI 賦能的生物學和醫學將讓我們把人類生物學家在未來 50-100 年能取得的進展壓縮到 5-10 年。」</p>
+                </blockquote>
+            </div>
+
+            <div class="highlight-box">
+                <strong>醫療保健預測：</strong>
+                <ul>
+                    <li>可靠預防/治療幾乎所有傳染病</li>
+                    <li>消除大多數癌症</li>
+                    <li>有效預防和治癒遺傳疾病</li>
+                    <li>預防阿茲海默症</li>
+                    <li><strong>人類壽命翻倍至約 150 歲</strong></li>
+                </ul>
+            </div>
+
+            <p><strong>Hassabis 的藥物發現願景：</strong></p>
+            <blockquote>
+                <p>AI 可以將藥物開發時間「從數年縮短到數週」。</p>
+            </blockquote>
+            <p>目標：透過系統化的 AI 驅動流程「解決所有疾病」。</p>
+
+            <p><strong>氣候與資源：</strong></p>
+            <blockquote>
+                <p>「如果 AGI 技術實現，全球因稀缺資源的衝突可能逐漸消散，迎來和平與繁榮的新時代。」（Hassabis）</p>
+            </blockquote>
+
+            <h3>為轉型做準備</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>對象</th>
+                        <th>建議</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>對個人</strong></td>
+                        <td>「真正極度精通這些工具。」（Hassabis）</td>
+                    </tr>
+                    <tr>
+                        <td><strong>對政府</strong></td>
+                        <td>「我不認為人們完全意識到即將發生什麼以及其規模……政府在這種宏觀經濟規模的衝擊中需要扮演某種角色。」（Amodei）</td>
+                    </tr>
+                    <tr>
+                        <td><strong>對社會</strong></td>
+                        <td>需要新的政治哲學、財富重分配機制（UBI、全民基本服務）、AI 安全標準的國際合作、大規模投資可解釋性研究</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>個人的希望與恐懼</h3>
+            <div class="highlight-box">
+                <p><strong>兩位領導者令人驚訝的坦白：</strong></p>
+                <p>他們實際上更希望發展能稍微慢一點，給社會更多時間準備。</p>
+            </div>
+
+            <blockquote>
+                <p><strong>Hassabis 更深層的動機：</strong>「這就是我一生投入 AI 和 AGI 的全部原因，因為我認為它可以成為幫助我們回答這些問題 [關於現實本質] 的終極工具。」</p>
+            </blockquote>
+            <blockquote>
+                <p><strong>Amodei 的希望：</strong>「擁有一個真正鼓舞人心的未來願景至關重要，而不僅僅是滅火計劃……恐懼是一種動力，但還不夠：我們也需要希望。」</p>
+            </blockquote>
+        </section>
+
+        <section id="quotes">
+            <h2>6. 重點語錄</h2>
+
+            <h3>關於 AGI 時程</h3>
+            <div class="quote-grid">
+                <div class="quote-card">
+                    <div class="quote-speaker">Amodei</div>
+                    <div class="quote-text">「我很難想像會比 [2026-2027] 更久」</div>
+                </div>
+                <div class="quote-card">
+                    <div class="quote-speaker">Hassabis</div>
+                    <div class="quote-text">「目前的系統距離人類水準 AGI 還很遠」</div>
+                </div>
+                <div class="quote-card">
+                    <div class="quote-speaker">Hassabis</div>
+                    <div class="quote-text">「或許我們還需要一兩個突破」</div>
+                </div>
+            </div>
+
+            <h3>關於就業</h3>
+            <div class="quote-grid">
+                <div class="quote-card">
+                    <div class="quote-speaker">Amodei</div>
+                    <div class="quote-text">「我在 Anthropic 有工程師說：我不再寫任何程式碼了」</div>
+                </div>
+                <div class="quote-card">
+                    <div class="quote-speaker">Amodei</div>
+                    <div class="quote-text">「50% 的初階白領工作可能在五年內消失」</div>
+                </div>
+                <div class="quote-card">
+                    <div class="quote-speaker">Hassabis</div>
+                    <div class="quote-text">「真正極度精通這些工具」</div>
+                </div>
+            </div>
+
+            <h3>關於安全</h3>
+            <div class="quote-grid">
+                <div class="quote-card">
+                    <div class="quote-speaker">Hassabis</div>
+                    <div class="quote-text">「精靈無法被放回瓶中」</div>
+                </div>
+                <div class="quote-card">
+                    <div class="quote-speaker">Amodei</div>
+                    <div class="quote-text">「這是一個風險，如果我們共同努力，是可以解決的」</div>
+                </div>
+            </div>
+
+            <h3>關於地緣政治</h3>
+            <div class="quote-grid">
+                <div class="quote-card">
+                    <div class="quote-speaker">Amodei</div>
+                    <div class="quote-text">「賣晶片給中國就像把核武賣給北韓」</div>
+                </div>
+                <div class="quote-card">
+                    <div class="quote-speaker">Hassabis</div>
+                    <div class="quote-text">「中國實驗室大約落後六個月」</div>
+                </div>
+            </div>
+
+            <h3>關於未來</h3>
+            <div class="quote-grid">
+                <div class="quote-card">
+                    <div class="quote-speaker">Hassabis</div>
+                    <div class="quote-text">「AGI 到來之後，我們將進入未知領域」</div>
+                </div>
+                <div class="quote-card">
+                    <div class="quote-speaker">Amodei</div>
+                    <div class="quote-text">「我們正在敲開不可思議能力的大門」</div>
+                </div>
+                <div class="quote-card">
+                    <div class="quote-speaker">兩人</div>
+                    <div class="quote-text">「我們更希望發展能稍微慢一點」</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="sources">
+            <h2>7. 資料來源</h2>
+
+            <div class="sources-section">
+                <h3>主要來源 - 2026 達沃斯</h3>
+                <ul>
+                    <li><a href="https://www.weforum.org/meetings/world-economic-forum-annual-meeting-2026/sessions/the-day-after-agi/" target="_blank">世界經濟論壇：AGI 之後的那一天議程</a></li>
+                    <li><a href="https://fortune.com/2026/01/23/deepmind-demis-hassabis-anthropic-dario-amodei-yann-lecun-ai-davos/" target="_blank">Fortune：AI 領袖在達沃斯就人類水準智能有多近發生分歧</a></li>
+                    <li><a href="https://www.euronews.com/next/2026/01/20/ai-at-davos-2026-from-work-to-useful-and-safe-ai-heres-what-the-tech-leaders-have-said" target="_blank">Euronews：2026 達沃斯 AI</a></li>
+                </ul>
+
+                <h3>分析與評論</h3>
+                <ul>
+                    <li><a href="https://www.abzglobal.net/web-development-blog/the-day-after-agi-what-demis-hassabis-and-dario-amodei-said-at-the-world-economic-forum" target="_blank">abZ Global：Demis Hassabis 與 Dario Amodei 在世界經濟論壇談 AGI 之後的那一天</a></li>
+                    <li><a href="https://jpcaparas.medium.com/what-amodei-and-hassabis-said-about-agi-timelines-jobs-and-china-at-davos-156308aa12c3" target="_blank">Medium：Amodei 與 Hassabis 在達沃斯談 AGI 時程、就業與中國</a></li>
+                    <li><a href="https://medium.com/@ZombieCodeKill/hassabis-and-amodei-interview-at-davos-2026-ad719642d289" target="_blank">Medium：2026 達沃斯 Hassabis 與 Amodei 訪談</a></li>
+                    <li><a href="https://dig.watch/updates/davos-2026-reveals-competing-visions-for-ai" target="_blank">Digital Watch：2026 達沃斯揭示 AI 的競爭願景</a></li>
+                </ul>
+
+                <h3>地緣政治報導</h3>
+                <ul>
+                    <li><a href="https://www.bloomberg.com/news/articles/2026-01-20/anthropic-ceo-says-selling-advanced-ai-chips-to-china-is-crazy" target="_blank">Bloomberg：Anthropic 執行長稱向中國出售 AI 晶片如同向北韓出售核武</a></li>
+                    <li><a href="https://www.bloomberg.com/news/articles/2026-01-20/deepmind-ceo-says-chinese-ai-firms-are-6-months-behind-the-west" target="_blank">Bloomberg：DeepMind 執行長稱中國 AI 公司落後西方 6 個月</a></li>
+                    <li><a href="https://siliconangle.com/2026/01/20/anthropic-boss-dario-amodei-slams-trump-crazy-decision-sell-advanced-ai-chips-china/" target="_blank">SiliconANGLE：Anthropic 老闆抨擊川普 AI 晶片對中銷售政策</a></li>
+                </ul>
+
+                <h3>就業與經濟影響</h3>
+                <ul>
+                    <li><a href="https://finance.yahoo.com/news/anthropic-ceo-predicts-ai-models-233113047.html" target="_blank">Yahoo Finance：Anthropic 執行長預測 AI 模型將取代軟體工程師</a></li>
+                    <li><a href="https://finance.yahoo.com/news/at-davos-fears-about-ai-driven-job-loss-take-center-stage-124805401.html" target="_blank">Yahoo Finance：達沃斯，AI 驅動的失業恐懼成焦點</a></li>
+                    <li><a href="https://fortune.com/2026/01/22/jpmorgan-chase-ceo-jamie-dimon-ai-layoff-income-assist-workers-elon-musk-sam-altman-universal-basic-income/" target="_blank">Fortune：摩根大通執行長歡迎政府禁止大規模 AI 裁員</a></li>
+                    <li><a href="https://fortune.com/2026/01/20/blackrock-billionaire-ceo-larry-fink-capitalism-critique-ai-world-economic-forum-davos/" target="_blank">Fortune：貝萊德執行長 Larry Fink 警告 AI 可能成為資本主義的失敗</a></li>
+                </ul>
+
+                <h3>安全與技術</h3>
+                <ul>
+                    <li><a href="https://www.anthropic.com/news/anthropics-responsible-scaling-policy" target="_blank">Anthropic：負責任擴展政策</a></li>
+                    <li><a href="https://www.anthropic.com/news/activating-asl3-protections" target="_blank">Anthropic：啟動 ASL-3 保護措施</a></li>
+                    <li><a href="https://deepmind.google/blog/introducing-the-frontier-safety-framework/" target="_blank">Google DeepMind：前沿安全框架</a></li>
+                    <li><a href="https://www.darioamodei.com/post/the-urgency-of-interpretability" target="_blank">Dario Amodei：可解釋性的緊迫性</a></li>
+                    <li><a href="https://www.cbsnews.com/news/anthropic-ceo-dario-amodei-warning-of-ai-potential-dangers-60-minutes-transcript/" target="_blank">CBS News：為何 Anthropic 執行長警告 AI 的潛在危險</a></li>
+                </ul>
+
+                <h3>背景與脈絡</h3>
+                <ul>
+                    <li><a href="https://time.com/7277608/demis-hassabis-interview-time100-2025/" target="_blank">TIME：Demis Hassabis TIME100 專訪</a></li>
+                    <li><a href="https://www.cnbc.com/2025/03/17/human-level-ai-will-be-here-in-5-to-10-years-deepmind-ceo-says.html" target="_blank">CNBC：能在任何任務上匹配人類的 AI 將在 5-10 年內出現</a></li>
+                    <li><a href="https://www.darioamodei.com/essay/machines-of-loving-grace" target="_blank">Dario Amodei：充滿愛的機器（文章）</a></li>
+                    <li><a href="https://www.axios.com/2025/12/05/ai-deepmind-gemini-agi" target="_blank">Axios：變革性 AGI 已在地平線上</a></li>
+                    <li><a href="https://www.cfr.org/articles/how-2026-could-decide-future-artificial-intelligence" target="_blank">外交關係委員會：2026 年如何決定人工智慧的未來</a></li>
+                    <li><a href="https://lexfridman.com/demis-hassabis-2-transcript/" target="_blank">Lex Fridman Podcast #475：Demis Hassabis 逐字稿</a></li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>本報告由 5 個專業研究代理深度研究編撰，分析了 2026 世界經濟論壇及相關報導的多個主要和次要來源。</p>
+        <p style="margin-top: 1rem;">最後更新：2026 年 1 月 24 日</p>
+    </footer>
+</body>
+</html>
