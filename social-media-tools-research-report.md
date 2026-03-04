@@ -18,8 +18,9 @@
    - [Twitter Auto-Post Bot](#27-twitter-auto-post-bot)
 3. [功能矩陣](#3-功能矩陣)
 4. [技術棧比較](#4-技術棧比較)
-5. [適用場景建議](#5-適用場景建議)
-6. [結論](#6-結論)
+5. [發文機制深度分析](#5-發文機制深度分析)
+6. [適用場景建議](#6-適用場景建議)
+7. [結論](#7-結論)
 
 ---
 
@@ -458,7 +459,97 @@ python web.py  # 或 python cli.py
 
 ---
 
-## 5. 適用場景建議
+## 5. 發文機制深度分析
+
+> **核心發現：7 個專案全部使用各平台的官方 REST API 或官方 SDK，沒有任何一個使用 Playwright / Puppeteer / Selenium 等瀏覽器自動化。**
+
+### 5.1 各專案發文機制總覽
+
+| 專案 | 發文方式 | HTTP Client | 瀏覽器自動化 |
+|---|---|---|---|
+| **Postiz** | 官方 API + 少量 SDK | `fetch`（原生）| ❌ 無 |
+| **Mixpost** | 官方 API（自行封裝）| Guzzle（Laravel HTTP） | ❌ 無 |
+| **Socioboard** | 官方 API | axios / request | ❌ 無 |
+| **Randolly** | 官方 API + 非官方封裝 | twit / instagram-web-api | ❌ 無 |
+| **ImPosting** | 官方 API | requests / httpx | ❌ 無 |
+| **EventBridge** | 官方 API | AWS Lambda HTTP | ❌ 無 |
+| **Twitter Bot** | Tweepy SDK | Tweepy (requests) | ❌ 無 |
+
+### 5.2 Postiz 各平台詳細實作（最完整，36 個 Provider）
+
+| 平台 | API | 認證方式 | 具體實作 |
+|---|---|---|---|
+| **X (Twitter)** | Twitter API v2 | OAuth 1.0a | `twitter-api-v2` SDK → `client.v2.tweet()` |
+| **Facebook** | Graph API v20.0 | OAuth 2.0 | 原生 `fetch` → `/feed`、`/photos`、`/videos` |
+| **Instagram** | Meta Graph API v20.0 | OAuth 2.0 | 原生 `fetch` → `/media` + `/media_publish` 兩步驟 |
+| **LinkedIn** | LinkedIn REST API v2 | OAuth 2.0 Bearer | 原生 `fetch` → `/rest/posts` |
+| **TikTok** | TikTok Open API v2 | OAuth 2.0 | 原生 `fetch` → `/v2/post/publish/` + 輪詢狀態 |
+| **Bluesky** | AT Protocol | 帳密登入 (JWT) | `@atproto/api` SDK → `agent.post()` |
+| **Mastodon** | Mastodon REST API | OAuth 2.0 Bearer | 原生 `fetch` → `/api/v1/statuses` |
+| **Reddit** | OAuth Reddit API | OAuth 2.0 | 原生 `fetch` → `/api/submit` + WebSocket 監控 |
+| **Discord** | Discord API | Bot Token / Webhook | 原生 `fetch` |
+| **Pinterest** | Pinterest API | OAuth 2.0 | 原生 `fetch` |
+| **Threads** | Meta Threads API | OAuth 2.0 | 原生 `fetch` |
+| **YouTube** | Google APIs | OAuth 2.0 | 原生 `fetch` |
+
+**Postiz 的設計哲學**：除了 Twitter（`twitter-api-v2`）和 Bluesky（`@atproto/api`）使用第三方 SDK 外，其餘平台全部用原生 `fetch` 直接呼叫 REST API endpoint。這樣做的好處是不受 SDK 版本更新影響，也方便自行處理錯誤和重試邏輯。
+
+### 5.3 為什麼不用 Playwright / 瀏覽器自動化？
+
+| 考量 | 官方 API | Playwright / 瀏覽器自動化 |
+|---|---|---|
+| **穩定性** | 高（有版本保證，如 Graph API v20.0）| 低（UI 改版即失效）|
+| **速度** | 快（單一 HTTP 請求）| 慢（啟動瀏覽器、渲染頁面、等待元素）|
+| **資源消耗** | 極低（僅 HTTP call）| 高（Headless Chrome 每實例 ~200MB RAM）|
+| **違反 ToS** | 無風險（官方授權使用）| 高風險（大部分平台明確禁止）|
+| **帳號封鎖** | 低風險 | 高風險（行為偵測、指紋辨識）|
+| **媒體上傳** | 專用 endpoint，可靠 | 模擬表單上傳，不穩定 |
+| **Rate Limit** | 清楚文件化的限制 | 無法預測的封鎖 |
+| **規模化** | 易（平行 API 呼叫）| 難（每帳號需獨立瀏覽器實例）|
+| **維護成本** | 低（API 版本遷移有通知）| 高（需持續追蹤 UI 變更）|
+
+### 5.4 各平台官方 API 的發文流程
+
+#### Twitter/X（API v2）
+```
+OAuth 1.0a 認證 → 上傳媒體 (v2/uploadMedia) → 發推 (v2/tweet)
+```
+
+#### Facebook / Instagram（Meta Graph API）
+```
+OAuth 2.0 長期 Token → 上傳媒體 (/photos, /media) → 等待處理完成 → 發布 (/feed, /media_publish)
+```
+Instagram 需要兩步驟：先建立媒體物件，輪詢處理狀態，完成後才能發布。
+
+#### TikTok（Open API v2）
+```
+OAuth 2.0 → 初始化上傳 (/post/publish/video/init) → 上傳媒體 → 輪詢發布狀態（每 10 秒）→ 完成
+```
+TikTok 的非同步流程最複雜，需要持續輪詢 `/post/publish/status/fetch/` 直到狀態為 `PUBLISH_COMPLETE`。
+
+#### LinkedIn（REST API v2）
+```
+OAuth 2.0 Bearer → 初始化媒體上傳 (/rest/{type}?action=initializeUpload) → 分塊上傳 → 建立貼文 (/rest/posts)
+```
+
+#### Bluesky（AT Protocol）
+```
+帳密登入 (JWT) → agent.uploadBlob() → agent.post() (含 RichText facets)
+```
+Bluesky 是唯一不用 OAuth 而用帳密 + JWT 的平台。
+
+#### Mastodon（REST API）
+```
+OAuth 2.0 Bearer → 上傳媒體 (/api/v1/media) → 發布 (/api/v1/statuses)
+```
+
+### 5.5 唯一的例外：Randolly 的 Instagram
+
+Randolly 使用 `instagram-web-api`（非官方套件），這個套件透過模擬瀏覽器 HTTP 請求（非 Playwright/Puppeteer）來存取 Instagram 的 web API。這不是真正的瀏覽器自動化，而是逆向工程 Instagram 的內部 API 呼叫。這種方式極不穩定，容易被封鎖。
+
+---
+
+## 6. 適用場景建議
 
 ### 企業 / 行銷團隊 → **Postiz** 或 **Mixpost Pro**
 - 需要多平台、團隊協作、審批流程、分析報告
@@ -484,7 +575,7 @@ python web.py  # 或 python cli.py
 
 ---
 
-## 6. 結論
+## 7. 結論
 
 ### 綜合排名
 
