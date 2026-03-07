@@ -302,34 +302,44 @@ Foundation never shut down but pivoted repeatedly (invite-only → open → Worl
 | Attribute | Detail |
 |-----------|--------|
 | **Date** | November 11, 2021 |
-| **Announcement** | A single tweet: **"discontinued"** |
-| **Notice period** | **Zero** — immediate |
-| **Asset model** | Non-custodial (Tezos blockchain) |
+| **Announcement** | Twitter bio changed to **"discontinued"** + one tweet with the smart contract address |
+| **Notice period** | **Zero** — immediate, no warning |
+| **Asset model** | Non-custodial (Tezos blockchain + IPFS) |
+| **Scale at shutdown** | 500,000+ NFTs, ~30,000 active wallets, $50.37M total sales |
 
-**What happened:** Founder Rafael Lima unilaterally took down the website with no warning. He later described it as an "art performance" and said *"It was never meant to be a company."*
+**What happened:** Founder Rafael Lima unilaterally took down hicetnunc.xyz with no warning. An artist reported he "got overwhelmed and decided, overnight, to close the site." No explanation, no farewell message, no instructions for users.
 
-**Remarkable outcome:** Within 24-48 hours, the community forked the open-source code and created multiple alternatives (OBJKT, Teia, hic.af). This became a celebrated case study in Web3 resilience.
+**No assets lost:** All NFTs remained on the Tezos blockchain, all media files on IPFS. The shutdown was purely a frontend removal — smart contracts continued functioning.
 
-**Lesson for Lootex:** While HEN's abruptness is an anti-pattern, the community's response shows the power of non-custodial, on-chain assets. When NFTs are in users' wallets, the platform's disappearance doesn't threaten their assets.
+**Remarkable community response:** Within days, multiple forks emerged:
+- **objkt.com** — Immediately absorbed HEN traffic, became the largest Tezos NFT marketplace
+- **Teia (teia.art)** — Community-built fork governed as a DAO
+- **hicetnunc.art** — Mirror site later handed to the community
+- Lima reduced marketplace contract fee from 2.5% to 1% and ceded control to the community
+
+**Lesson for Lootex:** While HEN's abruptness is an anti-pattern, the community's response shows the power of non-custodial, on-chain assets. Open-source code + on-chain contracts = community can resurrect even after founder departure.
 
 ---
 
-#### Cent
+#### Cent (~150,000 users, home of Jack Dorsey's $2.9M tweet NFT)
 
 | Attribute | Detail |
 |-----------|--------|
-| **Date** | February 6, 2023 |
-| **Announcement** | Media interview (The Verge) with CEO Cameron Hejazi |
-| **Action** | Paused NFT trading |
+| **Date** | February 6, 2022 (not 2023 as sometimes misreported) |
+| **Announcement** | **Reuters** exclusive interview with CEO Cameron Hejazi (not public announcement first) |
+| **Action** | Halted most NFT trading; "Valuables" (tweet NFTs) continued |
+| **Advance notice** | Zero — users discovered trading was disabled before any explanation |
 
-**Remarkably honest key quotes:**
-> *"We had a problem with people selling other people's content as NFTs."*
-> *"The vast majority of things that were minted on Cent were not authentic."*
-> *"We tried to put together best practices around it, but it's just very, very difficult."*
+**Remarkably candid key quotes (Reuters interview):**
+> *"There's a spectrum of activity that is happening that basically shouldn't be happening — like, legally."*
+> *"We would ban offending accounts but it was like we're playing a game of whack-a-mole... Every time we would ban one, another one would come up, or three more would come up."*
+> *"I think this is a pretty fundamental problem with Web3."*
 
-**Community reaction:** Cent's honesty was **both respected and weaponized**. NFT skeptics used the quotes as ammunition; crypto community appreciated the candor.
+**Three problems cited:** (1) selling unauthorized copies of other NFTs, (2) creating NFTs of content that doesn't belong to the creator, (3) selling NFT sets that resemble securities.
 
-**Lesson for Lootex:** Honesty about industry challenges is respected when done right, but be careful about statements that could be used to undermine the broader ecosystem.
+**Community reaction:** Became a landmark moment in the NFT plagiarism/fraud discourse. Cent's honesty was **both respected and weaponized** — NFT skeptics cited Hejazi's quotes as industry-wide indictment; the crypto community appreciated the candor. The marketplace appears to have never fully reopened.
+
+**Lesson for Lootex:** Honesty about industry challenges is respected when done right, but be careful about statements that could be used to undermine the broader ecosystem. Also: announce to your own community first, not through media interviews.
 
 ---
 
@@ -341,17 +351,17 @@ Foundation never shut down but pivoted repeatedly (invite-only → open → Worl
 |------|---------|----------|-----------|
 | 1 | **Gem.xyz** | Acquisition + seamless migration | Very positive |
 | 2 | **MakersPlace** | Formal announcement + structured wind-down | Positive (sad but grateful) |
-| 3 | **Recur** | Honest, apologetic announcement | Mixed-positive |
-| 4 | **Foundation** | Continuous pivoting (no shutdown) | Mixed |
-| 5 | **hic et nunc** | Abrupt, but community forked successfully | Shock → empowerment |
-| 6 | **Cent** | Honest about problems, paused trading | Mixed |
-| 7 | **X2Y2** | Framed as pivot | Mixed-negative |
-| 8 | **KnownOrigin** | Corporate shutdown by parent | Negative |
-| 9 | **Mintable** | Misleading "evolution" framing | Negative |
-| 10 | **Quixotic** | Rebrand → quiet death | Negative |
-| 11 | **LooksRare** | Gradual fade, no announcement | Very negative |
-| 12 | **Nifty Gateway** | Gradual fade + custodial concerns | Very negative |
-| 13 | **Async Art** | Gradual fade + feature degradation | Very negative |
+| 3 | **Async Art** | Personal announcement by founder + art preservation | Positive (nostalgic, respectful) |
+| 4 | **Recur** | Phased 90-day wind-down | Mixed-positive |
+| 5 | **Foundation** | Continuous pivoting (no shutdown) | Mixed |
+| 6 | **hic et nunc** | Abrupt, but community forked successfully | Shock → empowerment |
+| 7 | **Cent** | Honest about problems, paused trading | Mixed |
+| 8 | **X2Y2** | Framed as pivot | Mixed-negative |
+| 9 | **KnownOrigin** | Corporate shutdown by parent | Negative |
+| 10 | **Mintable** | Misleading "evolution" framing | Negative |
+| 11 | **Quixotic** | Rebrand → quiet death | Negative |
+| 12 | **LooksRare** | Gradual fade, no announcement | Very negative |
+| 13 | **Nifty Gateway** | Gradual fade + custodial concerns | Very negative |
 
 ### Notice Period Comparison
 
@@ -619,7 +629,7 @@ Avoid: "Lootex is shutting down" (too abrupt for a subject line)
 | 10 | Gem.xyz | 2023 | Acquisition merge | 5-6 months | Aggregator | "You're getting an upgrade" | **Best transition** ever |
 | 11 | Foundation | Ongoing | Continuous pivot | N/A | Non-custodial | "Evolving" | Only works if you keep operating |
 | 12 | hic et nunc | 2021 | Abrupt | **Zero** | Non-custodial | "discontinued" | Community forks saved the day |
-| 13 | Cent | 2023 | Honest pause | Immediate | Non-custodial | Brutally honest | Honesty can be weaponized |
+| 13 | Cent | 2022 | Honest pause | Zero | Non-custodial | Brutally honest | Honesty can be weaponized |
 
 *\*Non-custodial but with platform-dependent features that degraded*
 
