@@ -153,16 +153,20 @@ For each case, we researched: announcement channels, exact wording/tone, timelin
 
 | Attribute | Detail |
 |-----------|--------|
-| **Date** | Gradual throughout 2023-2024 |
-| **Formal announcement** | **None** — slow death with no official shutdown post |
+| **Date** | Gradual decline 2023-2026 (still technically operational as of March 2026) |
+| **Formal announcement** | **None** — no official shutdown post has ever been made |
 | **Asset model** | Non-custodial |
-| **Token** | $LOOKS crashed 90%+ from ATH |
+| **Token** | $LOOKS at ~$0.0007 (market cap ~$691K); OKX delisted Nov 2025 |
+| **Development** | ~1 developer, 7 weekly commits (DefiLlama, March 2025) |
 
 **What went wrong:**
 - No formal "we are shutting down" announcement was ever made
-- The platform simply became less active until it was essentially dead
-- Anonymous founders eroded trust further
+- The platform simply became less active — shifted from NFT trading rewards to gaming features (raffles, YOLO)
+- Anonymous founders eroded trust
+- Exchange delistings signal decline more loudly than any announcement
 - Community felt abandoned with "rug pull" accusations
+
+**Contrast with X2Y2:** LooksRare's "slow fade" model vs. X2Y2's "clean break" model. X2Y2's titled blog post *"The Sunset of X2Y2"* with a specific date was far better received.
 
 **Lesson for Lootex:** A gradual fade is **always worse** than a clean, honest announcement. Silence breeds rumors and resentment. If you're shutting down, say it clearly.
 
@@ -228,21 +232,31 @@ For each case, we researched: announcement channels, exact wording/tone, timelin
 
 ---
 
-#### X2Y2
+#### X2Y2 ($5.6B lifetime volume)
 
 | Attribute | Detail |
 |-----------|--------|
-| **Date** | August 28, 2023 |
-| **Channels** | Twitter/X, blog post, Discord |
-| **Notice period** | ~2-4 weeks |
-| **Tone** | "Strategic pivot" framing |
+| **Date** | March 31, 2025 (shutdown: April 30, 2025) |
+| **Channels** | Blog on **Mirror.xyz** + **Paragraph**, amplified via Twitter/X (@the_x2y2), founder TP's personal account |
+| **Notice period** | 30 days |
+| **Tone** | Reflective, forward-looking — "clean break + pivot" |
+| **Blog title** | *"The Sunset of X2Y2"* |
 
-**Key language:**
-> *"We are evolving beyond the traditional NFT marketplace model."*
+**Key language (founder TP):**
+> *"After 3 incredible years and $5.6B in trading volume, X2Y2 will be sunsetting as an NFT marketplace on April 30, 2025."*
+> *"Marketplaces live or die by network effects. We fought tooth and nail to be #1, but after three years, it's clear it's time to move on."*
+> *"The NFT chapter taught us a lot — most of all, that lasting value beats chasing trends. That lesson's why we're drawing a line here, not a pause or a maybe, but a full stop on X2Y2 as we knew it."*
 
-**Community reaction:** Mixed to negative. The pivot to "AI tools" was seen as opportunistic. The $X2Y2 token crashed.
+**Asset handling:**
+- Non-custodial — NFTs safe in user wallets
+- Smart contracts left live: *"The smart contracts will keep running, so you can still interact with them as needed — no rush to pull anything."*
+- Security experts recommended users **revoke contract approvals** to avoid post-shutdown phishing
 
-**Lesson for Lootex:** If there's no genuine continuation of service, don't dress up a shutdown as a "pivot." Users see through it.
+**Community reaction:** $X2Y2 token dropped 10-13% on announcement (already down 99.6% from ATH of ~$4.17 to ~$0.0014). Shutdown seen as inevitable. Some skepticism about AI pivot as "narrative hop."
+
+**Lesson for Lootex:** X2Y2's "clean break" with a titled blog post, specific volume stats, and honest reflection was received far better than a gradual fade. The "full stop, not a pause or a maybe" framing was clear and respected.
+
+**Sources:** [Mirror.xyz](https://mirror.xyz/x2y2.eth/85DG2KcKmJd1AiyXU7BU2yATys1hgxWWXju_pmESwYI) | [CoinDesk](https://www.coindesk.com/markets/2025/03/31/nft-marketplace-x2y2-to-shut-down-after-trading-volumes-collapsed) | [The Block](https://www.theblock.co/post/348866/nft-marketplace-x2y2-shut-down-crypto-ai-pivot)
 
 ---
 
@@ -353,10 +367,10 @@ Foundation never shut down but pivoted repeatedly (invite-only → open → Worl
 | 2 | **MakersPlace** | Formal announcement + structured wind-down | Positive (sad but grateful) |
 | 3 | **Async Art** | Personal announcement by founder + art preservation | Positive (nostalgic, respectful) |
 | 4 | **Recur** | Phased 90-day wind-down | Mixed-positive |
-| 5 | **Foundation** | Continuous pivoting (no shutdown) | Mixed |
-| 6 | **hic et nunc** | Abrupt, but community forked successfully | Shock → empowerment |
-| 7 | **Cent** | Honest about problems, paused trading | Mixed |
-| 8 | **X2Y2** | Framed as pivot | Mixed-negative |
+| 5 | **X2Y2** | Clean break blog post + honest reflection | Mixed (muted, token already dead) |
+| 6 | **Foundation** | Continuous pivoting (no shutdown) | Mixed |
+| 7 | **hic et nunc** | Abrupt, but community forked successfully | Shock → empowerment |
+| 8 | **Cent** | Honest about problems, paused trading | Mixed |
 | 9 | **KnownOrigin** | Corporate shutdown by parent | Negative |
 | 10 | **Mintable** | Misleading "evolution" framing | Negative |
 | 11 | **Quixotic** | Rebrand → quiet death | Negative |
@@ -371,7 +385,7 @@ Foundation never shut down but pivoted repeatedly (invite-only → open → Worl
 | Recur | 90 days (phased) | Yes (transfer to external wallet) |
 | Gem.xyz | 5-6 months | No |
 | KnownOrigin | ~30 days | Partial (backup metadata) |
-| X2Y2 | 2-4 weeks | No |
+| X2Y2 | 30 days | No |
 | hic et nunc | **0 days** | No |
 | Cent | Immediate | No |
 | **Lootex** (recommended) | **2-4 weeks** | **No** |
@@ -624,7 +638,7 @@ Avoid: "Lootex is shutting down" (too abrupt for a subject line)
 | 5 | Nifty Gateway | 2023-25 | Gradual fade | None | Custodial | Corporate fade | Custodial fade = maximum damage |
 | 6 | Async Art | 2023 | Formal + personal | ~2-3 months | Non-custodial* | Personal, reflective | Personal tone = best reception |
 | 7 | Quixotic | 2022-23 | Rebrand → death | None | Non-custodial | "We're growing" → silence | Don't rebrand as a delay tactic |
-| 8 | X2Y2 | 2023 | Pivot framing | 2-4 weeks | Non-custodial | "Evolving" | Don't fake a pivot |
+| 8 | X2Y2 | 2025 | Clean break + pivot | 30 days | Non-custodial | Reflective, forward-looking | "Full stop, not a pause or a maybe" |
 | 9 | Mintable | 2023 | Pivot framing | Unclear | Non-custodial* | "Upgrading" | Lazy mints disappeared |
 | 10 | Gem.xyz | 2023 | Acquisition merge | 5-6 months | Aggregator | "You're getting an upgrade" | **Best transition** ever |
 | 11 | Foundation | Ongoing | Continuous pivot | N/A | Non-custodial | "Evolving" | Only works if you keep operating |
