@@ -134,22 +134,36 @@ For each case, we researched: announcement channels, exact wording/tone, timelin
 
 | Attribute | Detail |
 |-----------|--------|
-| **Date** | February 2024 (acquired June 2022) |
-| **Channels** | Email, Twitter/X, blog, eBay corporate comms |
-| **Notice period** | ~30 days |
-| **Asset model** | Non-custodial (Ethereum), but metadata hosted on servers |
-| **Tone** | Corporate, impersonal |
+| **Date** | July 17, 2024 (acquired June 2022; staff layoffs Feb 2024) |
+| **Channels** | **Twitter/X thread** ([@KnownOrigin_io](https://x.com/KnownOrigin_io/status/1813576642058698830)) |
+| **Notice period** | "Upcoming weeks" (vague) |
+| **Asset model** | Non-custodial (Ethereum), but metadata on IPFS with platform-paid pinning |
+| **Tone** | Grateful, nostalgic — better than expected for a corporate shutdown |
 
 **Key announcement language:**
-> *"After careful consideration, we have made the difficult decision to wind down KnownOrigin."*
+> *"After careful consideration and evaluation we can confirm KnownOrigin will continue to wind down its on-chain marketplaces & minter over the upcoming weeks."*
+> *"KnownOrigin is proud of its place in the history of digital art since its inception in 2018."*
 
-**What they did wrong:**
-- Corporate, impersonal tone — stark contrast to the crypto-native community
-- No migration to eBay's main platform
-- Only ~18 months between acquisition and shutdown
-- Artists felt abandoned: *"Our collector relationships, our sales history, our community — all gone"*
+**What they did right:**
+- Reduced fees on OpenSea to **0%** for KnownOrigin NFTs
+- Committed to paying **IPFS pinning costs until January 31, 2027** (~2.5 years)
+- Returned all outstanding bid ETH to bidders
+- Creator Contracts remain self-custodial and accessible via Etherscan
+- Directed users to OpenSea and Magic Eden for continued trading
 
-**Lesson for Lootex:** Even when the decision is difficult, **speak like a community member, not a corporation**. The KnownOrigin shutdown is a cautionary tale of tone-deaf communication.
+**What went wrong:**
+- ~2 years between acquisition and shutdown; co-founder David Moore "made redundant" in layoffs
+- Vague "upcoming weeks" timeline (no specific date)
+- V1/V2 "lazy minted" tokens may not appear on third-party marketplaces
+
+**Community reaction:**
+> *"It was an honour to mint on KnownOrigin — so many great memories."* — XCOPY
+> *"Are eBay going to pay the IPFS storage bill forever? If they stop paying, the art will eventually die."* — Ella (BrightLightArt)
+> *"Right now, NFTs are built on an absolute house of cards."* — Jonty
+
+**Lesson for Lootex:** KnownOrigin's IPFS pinning commitment (2.5 years) and 0% fee migration to OpenSea were well-received. Even in a corporate shutdown, **concrete preservation commitments** matter more than emotional language.
+
+**Source:** [X thread](https://x.com/KnownOrigin_io/status/1813576642058698830)
 
 ---
 
@@ -288,23 +302,25 @@ For each case, we researched: announcement channels, exact wording/tone, timelin
 
 ---
 
-#### Mintable
+#### Mintable (one of the oldest NFT marketplaces, est. 2018)
 
 | Attribute | Detail |
 |-----------|--------|
-| **Date** | September 2023 onward |
-| **Framing** | "Transitioning to zkSync" |
-| **Critical issue** | Gasless/lazy-minted NFTs that were never purchased **effectively disappeared** |
+| **Date** | **No formal shutdown announcement** — silent wind-down through 2024-2025 |
+| **Pivot** | Dec 2024: pivoted to **ERC-721ex** protocol (community tokens/DAO system) |
+| **Status** | DappRadar marked **inactive** (no on-chain activity for 30+ days) |
+| **Last activity** | Last recorded NFT drop: December 25, 2025 |
 
-**Key language:**
-> *"We're evolving Mintable to bring a better experience."*
+**CEO Zach Burks on the pivot:**
+> *"NFTs have always been about the community; we must learn from their drop in value and ensure that we are developing for 96% of users who have lost value."*
 
 **What went wrong:**
-- The "upgrade" framing was misleading — it was essentially a restart
-- No migration of existing NFTs to the new platform
-- Users with gasless mints lost their creations
+- **No announcement at all** — the marketplace simply stopped functioning
+- No blog post, no Twitter thread, no email, no Discord message
+- Gasless/lazy-minted NFTs that were never purchased **effectively disappeared**
+- The ERC-721ex pivot was a completely different product with no continuity
 
-**Lesson for Lootex:** Be honest. If the marketplace is ending, say "ending," not "evolving."
+**Lesson for Lootex:** Mintable represents the worst-case "silent death" pattern. **Any announcement is better than no announcement.** Even a brief tweet is more respectful than silence.
 
 ---
 
@@ -399,8 +415,8 @@ Foundation never shut down but pivoted repeatedly (invite-only → open → Worl
 | 6 | **Foundation** | Continuous pivoting (no shutdown) | Mixed |
 | 7 | **hic et nunc** | Abrupt, but community forked successfully | Shock → empowerment |
 | 8 | **Cent** | Honest about problems, paused trading | Mixed |
-| 9 | **KnownOrigin** | Corporate shutdown by parent | Negative |
-| 10 | **Mintable** | Misleading "evolution" framing | Negative |
+| 9 | **KnownOrigin** | Corporate shutdown with IPFS/migration commitments | Mixed-negative (XCOPY nostalgic; storage fears) |
+| 10 | **Mintable** | Silent wind-down, no announcement at all | Negative |
 | 11 | **Quixotic** | Rebrand → quiet death | Negative |
 | 12 | **LooksRare** | Gradual fade, no announcement | Very negative |
 | 13 | **Nifty Gateway** | Formal shutdown, but custodial nightmare + 30-day notice | Very negative (hostile, forced policy change) |
@@ -412,7 +428,7 @@ Foundation never shut down but pivoted repeatedly (invite-only → open → Worl
 | MakersPlace | ~5 months (phased) | Partial (custodial wallet users) |
 | Recur | 90 days (phased) | Yes (transfer to external wallet) |
 | Gem.xyz | 5-6 months | No |
-| KnownOrigin | ~30 days | Partial (backup metadata) |
+| KnownOrigin | "Upcoming weeks" (vague) | Partial (IPFS pinning paid until Jan 2027) |
 | Nifty Gateway | 30→90 days (extended after backlash) | Yes (withdraw from custodial omnibus contract) |
 | X2Y2 | 30 days | No |
 | hic et nunc | **0 days** | No |
@@ -662,13 +678,13 @@ Avoid: "Lootex is shutting down" (too abrupt for a subject line)
 |---|---------|------|------|--------|---------|------|--------|
 | 1 | MakersPlace | 2025 | Formal shutdown | ~5 months (phased) | Hybrid | Nostalgic, businesslike | **Gold standard** — longest notice period |
 | 2 | Recur | 2023 | Formal shutdown | 90 days (phased) | Custodial | Corporate, euphemistic | Phased timeline is useful |
-| 3 | KnownOrigin | 2024 | Corporate shutdown | ~30 days | Non-custodial | Corporate, cold | Don't sound like a corporation |
+| 3 | KnownOrigin | 2024 | Corporate shutdown | "Upcoming weeks" | Non-custodial | Grateful, nostalgic | IPFS pinning commitment + 0% fee migration |
 | 4 | LooksRare | 2023-24 | Gradual fade | None | Non-custodial | Silence | **Never** go silent |
 | 5 | Nifty Gateway | 2026 | Formal shutdown | 30→90 days | Custodial | Corporate, terse | 30-day notice + custodial = community revolt |
 | 6 | Async Art | 2023 | Formal + personal | ~2-3 months | Non-custodial* | Personal, reflective | Personal tone = best reception |
 | 7 | Quixotic | 2022-23 | Rebrand → death | None | Non-custodial | "We're growing" → silence | Don't rebrand as a delay tactic |
 | 8 | X2Y2 | 2025 | Clean break + pivot | 30 days | Non-custodial | Reflective, forward-looking | "Full stop, not a pause or a maybe" |
-| 9 | Mintable | 2023 | Pivot framing | Unclear | Non-custodial* | "Upgrading" | Lazy mints disappeared |
+| 9 | Mintable | 2024-25 | Silent wind-down + pivot | **None** | Non-custodial* | No announcement at all | Any announcement > silence |
 | 10 | Gem.xyz | 2023 | Acquisition merge | 5-6 months | Aggregator | "You're getting an upgrade" | **Best transition** ever |
 | 11 | Foundation | Ongoing | Continuous pivot | N/A | Non-custodial | "Evolving" | Only works if you keep operating |
 | 12 | hic et nunc | 2021 | Abrupt | **Zero** | Non-custodial | "discontinued" | Community forks saved the day |
