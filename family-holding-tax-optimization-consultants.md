@@ -462,11 +462,14 @@
 | **全球網絡** | 45 國 74 間分所、12,000+ 專業人員 |
 | **跨境能力** | ✅ 極強 — 透過 Baker McKenzie 美國辦公室可無縫協作 |
 | **官網** | [bakermckenzie.com.tw](https://www.bakermckenzie.com.tw/zh-hant/services-pages/tax) |
-| **接觸方式** | 透過官網「公司稅務/家族傳承」頁面預約 |
-| **費用** | 鐘點費約 NTD 8,000-15,000/hr（合夥律師可能更高） |
+| **地址** | 台北市敦化北路 168 號 15 樓 |
+| **電話** | +886-2-2712-6151 |
+| **Email** | taipei@bakermckenzie.com |
+| **接觸方式** | 致電或 email，要求與稅務/家族傳承團隊合夥律師安排初步諮詢 |
+| **費用** | 鐘點費約 NTD 10,000-20,000+/hr（合夥律師） |
 | **推薦度** | ⭐⭐⭐⭐⭐ |
 
-**推薦原因**：Baker McKenzie 是本案中唯一能真正做到「台灣律師 + 美國律師在同一事務所內無縫協作」的選擇。其家族傳承團隊專精高資產家族的跨境稅務與法律架構，且受國際稅務雜誌高度評價。
+**推薦原因**：Baker McKenzie 是本案中唯一能真正做到「台灣律師 + 美國律師在同一事務所內無縫協作」的選擇。Chambers 連續兩年（2024-2025）評選為「台灣最佳法律事務所」，World Tax 評價其「透過全球網絡為台灣最大企業及國際客戶提供跨法域稅務諮詢」。
 
 #### 理律法律事務所（Lee and Li）⭐⭐⭐⭐
 
@@ -477,25 +480,32 @@
 | **稅務團隊** | 具國內外律師/會計師執照的稅務專家，部分成員曾任國稅局 |
 | **官網** | [leeandli.com](https://www.leeandli.com/TW/Specialty/203.htm) |
 | **CFC 文章** | [理律 CFC 新制分析](https://www.leeandli.com/TW/Newsletters/6902.htm) |
-| **接觸方式** | 透過官網稅務頁面或直接聯繫 |
-| **費用** | 鐘點費約 NTD 8,000-15,000/hr |
+| **地址** | 台北市忠孝東路四段 555 號 8 樓 |
+| **電話** | +886-2-2763-8000 |
+| **Email** | attorneys@leeandli.com |
+| **接觸方式** | 致電或 email，指名「稅務專業分工小組」 |
+| **費用** | 鐘點費約 NTD 8,000-15,000+/hr |
 
 #### 常在國際法律事務所（Tsar & Tsai）⭐⭐⭐⭐
 
 | 項目 | 內容 |
 |------|------|
-| **簡介** | 1965 年創立，國內大型法律事務所 |
+| **簡介** | 1965 年創立，與理律、萬國並稱台灣三大，70+ 位專業人員 |
 | **專長** | **遺產規劃、遺囑、信託**、稅法及稅務規劃、跨國投資 |
 | **官網** | [tsartsai.com.tw](https://www.tsartsai.com.tw/) |
-| **接觸方式** | 官網或直接聯繫 |
+| **地址** | 台北市信義區松仁路 100 號 11 樓（南山廣場） |
+| **電話** | +886-2-2781-4111 / 6638-6999 |
+| **Email** | law@tsartsai.com.tw |
+| **接觸方式** | email 說明需求，要求與遺產規劃/信託及稅務團隊合夥律師安排諮詢 |
 | **推薦原因** | 明確將「遺產規劃及遺囑、信託」列為核心業務 |
 
 #### 其他台灣律所
 
-| 事務所 | 官網 | 跨境稅務能力 |
-|--------|------|-------------|
-| 萬國法律事務所（Formosa Transnational） | [taiwanlaw.com](https://www.taiwanlaw.com/cht/) | ⭐⭐⭐ |
-| 寰瀛法律事務所（Formosan Brothers） | [fblaw.com.tw](https://www.fblaw.com.tw/) | ⭐⭐⭐（有跨國遺產稅課徵研究） |
+| 事務所 | 官網 | 電話 | 跨境稅務能力 |
+|--------|------|------|-------------|
+| 萬國法律事務所（Formosa Transnational） | [taiwanlaw.com](https://www.taiwanlaw.com/cht/) | +886-2-2755-7366 | ⭐⭐⭐ |
+| 寰瀛法律事務所（Formosan Brothers） | [fblaw.com.tw](https://www.fblaw.com.tw/) | +886-2-2705-8086 | ⭐⭐⭐（有跨國遺產稅課徵研究） |
+| 鼎禎國際律師事務所 | [dzlawyer.tw](https://www.dzlawyer.tw/) | 02-2708-2685 | ⭐⭐⭐（資產/遺產規劃、稅務規劃） |
 
 ### 5.2 美國稅務律師事務所
 
@@ -503,12 +513,13 @@
 
 | 項目 | 內容 |
 |------|------|
-| **簡介** | 舊金山灣區精品律所，專精國際遺產與稅務規劃 |
+| **簡介** | 舊金山灣區精品律所，由前 IRS / 聯邦檢察官 Michael Lee 及具中美雙邊經驗的 Xiaowei Li 共同創辦 |
 | **據點** | San Jose / San Francisco Bay Area |
-| **專長** | **台美跨境遺產規劃**、非居民外國人稅務、跨國遺產管理 |
-| **跨境經驗** | ✅ 常與台灣、中國、香港、新加坡等地律師協作 |
+| **專長** | **台美跨境遺產規劃**、Irrevocable Trusts、Dynasty Trusts、Family Limited Partnerships、資產保護 |
+| **跨境經驗** | ✅ Xiaowei Li 熟悉台灣、中國、香港、新加坡法律系統，曾為混合國籍家庭設立美國國內不可撤銷信託 |
 | **官網** | [ruiattorneys.us](https://ruiattorneys.us/international-estate-tax-planning/) |
 | **服務語言** | 中文 / 英文 |
+| **費用** | 矽谷國際稅務律師行情約 USD $400-600+/hr |
 | **推薦原因** | 明確列出台灣 (ROC) 為其服務地區，專精國際家族的美國法律問題 |
 
 #### Dilendorf Law（紐約）⭐⭐⭐⭐
@@ -537,14 +548,38 @@
 | **專長** | 國際遺產規劃、跨境稅務、信託 |
 | **官網** | [lintaxlaw.com](https://lintaxlaw.com/what-we-do/international-estate-planning-2/) |
 
+#### DGW Kramer LLP（紐約）⭐⭐⭐⭐⭐ **（強力推薦）**
+
+| 項目 | 內容 |
+|------|------|
+| **簡介** | 紐約精品律所，Doris S. Hsu（許律師）為**台灣大學畢業、NYU 稅法碩士**，20+ 年跨境稅務經驗 |
+| **專長** | 移民前稅務規劃、CFC/PFIC 合規、**非美國捐贈人向美國受益人的遺產/信託/贈與規劃**、IRS 稅務審計與爭議、離岸資產合規（FBAR/FATCA） |
+| **官網** | [dgwllp.com](https://dgwllp.com/en/people/doris-s-hsu/) |
+| **服務語言** | **中文（國語）/ 台語 / 英文 / 法語** |
+| **費用** | 美國國際稅務律師行情約 USD $350-600+/hr |
+| **接觸方式** | 透過官網 [聯絡頁面](https://dgwllp.com/en/contactus/) 以中文說明需求 |
+| **推薦原因** | 台大背景、精通中英台語、專精 CFC/PFIC 合規及信託設立，與本案台美家族背景高度吻合 |
+
+#### Jones Day 眾達國際法律事務所 ⭐⭐⭐⭐
+
+| 項目 | 內容 |
+|------|------|
+| **簡介** | 唯一在台灣設有辦公室且律師同時具備**美國與台灣雙邊執業資格**的全球合夥制律所 |
+| **據點** | 台北 + 全球 40+ 國 |
+| **專長** | 跨境稅務、公司交易、訴訟與仲裁 |
+| **台灣地址** | 台北市敦化南路二段 2 號 |
+| **官網** | [jonesday.com/taipei](https://www.jonesday.com/en/locations/asia-pacific/taipei) |
+| **服務語言** | 中文 / 英文 |
+| **費用** | 國際頂級所，合夥人鐘點費約 USD $500-1,000+/hr |
+| **優勢** | 台北辦公室律師同時擁有美台雙邊執照，可直接處理雙邊法律事務 |
+
 #### 其他美國律所
 
 | 事務所 | 據點 | 專長 | 官網 |
 |--------|------|------|------|
 | Holland & Knight | 全美 | PFIC 架構、FTC 最大化 | [hklaw.com](https://www.hklaw.com/en/services/practices/private-wealth-services/international-private-client-group) |
 | Elizabeth Morgan & Associates | 美國 | 離岸信託、國際規劃精品 | [emalegal.com](https://www.emalegal.com/) |
-| Hone Maxwell LLP | 美國 | 外國稅務律師、國際稅務 | [honemaxwell.com](https://honemaxwell.com/international-tax-lawyers/) |
-| DGW Kramer LLP | 美國 | 跨境法律（Doris S. Hsu 華語律師） | [dgwllp.com](https://dgwllp.com/en/people/doris-s-hsu/) |
+| Hone Maxwell LLP | 美國+新加坡 | 國際稅務、跨境遺產信託、中文服務 | [honemaxwell.com](https://honemaxwell.com/international-tax-lawyers/) |
 
 ---
 
@@ -561,7 +596,7 @@
 | **美國端主導 CPA** | Peter Tseng CPA Firm | 美國 CFC/PFIC 申報、FTC 計算、年度個人稅務申報 |
 | **美國端家族辦公室** | TransGlobal 泛宇集團 | 美國端資產配置、信託與遺產規劃、全中文服務 |
 | **台灣端法律顧問** | Baker McKenzie（國際通商）或 Pamir Law Group | 公司解散清算法律程序、台灣端遺囑/股權轉讓 |
-| **美國端法律顧問** | Rui Attorneys 或 Dilendorf Law | 美國端信託設立、遺產規劃、贈與稅策略 |
+| **美國端法律顧問** | **DGW Kramer LLP（Doris Hsu）** 或 Rui Attorneys | 美國端信託設立、遺產規劃、CFC/PFIC 合規、贈與稅策略 |
 | **統籌協調** | KEDP 安致勤資 或 PwC 家族辦公室 | 確保台美兩端策略一致、時間點對齊 |
 
 ### 6.2 費用預估總覽
@@ -710,8 +745,9 @@
 - [ ] **立即**：聯繫 **TransGlobal 泛宇集團** 888-831-8868（免費），預約家族辦公室初次諮詢
 - [ ] **立即**：聯繫 PwC 資誠家族辦公室或 EY 安永家族辦公室，預約初步諮詢
 - [ ] **1 週內**：聯繫 Peter Tseng CPA Firm，確認其是否能處理本案規模的 CFC/PFIC 申報
-- [ ] **1 週內**：聯繫 Baker McKenzie（國際通商）稅務/家族傳承團隊，了解清算法律程序
-- [ ] **2 週內**：聯繫 Rui Attorneys 或 Dilendorf Law，了解美國端信託設立方案
+- [ ] **1 週內**：聯繫 Baker McKenzie（國際通商）+886-2-2712-6151 / taipei@bakermckenzie.com，了解清算法律程序
+- [ ] **1 週內**：聯繫 **DGW Kramer LLP（Doris Hsu 許律師）**，以中文 email 說明需求（台大背景、精通中英台語）
+- [ ] **2 週內**：聯繫 Rui Attorneys，了解美國端信託設立方案
 - [ ] **2 週內**：聯繫嘉晟 JS TAX CPA +886-2-2727-0179，諮詢美國不可撤銷信託架構
 - [ ] **1 個月內**：完成顧問團隊遴選，簽訂委任契約
 - [ ] **2 個月內**：開始完整的跨境稅務健檢
