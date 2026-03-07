@@ -44,8 +44,8 @@ We analyzed 13 NFT/Web3 project shutdowns across four categories:
 
 | Category | Projects |
 |----------|----------|
-| **Formal shutdown** | MakersPlace, Recur, KnownOrigin |
-| **Gradual fade** | LooksRare, Nifty Gateway, Async Art, Quixotic |
+| **Formal shutdown** | MakersPlace, Recur, KnownOrigin, Async Art |
+| **Gradual fade** | LooksRare, Nifty Gateway, Quixotic |
 | **Pivot / rebrand** | X2Y2, Mintable, Foundation, Gem.xyz |
 | **Abrupt shutdown** | hic et nunc, Cent |
 
@@ -90,24 +90,35 @@ For each case, we researched: announcement channels, exact wording/tone, timelin
 
 | Attribute | Detail |
 |-----------|--------|
-| **Date** | November 10, 2023 |
-| **Channels** | Twitter/X, email, blog post |
-| **Notice period** | ~6-8 weeks |
+| **Date** | August 18, 2023 (platform deprecated November 16, 2023) |
+| **Channels** | Twitter/X thread (@RecurForever) — primary channel; no dedicated blog post |
+| **Notice period** | ~90 days, phased timeline |
 | **Asset model** | Custodial — users needed to transfer to external wallets |
-| **Tone** | Transparent, apologetic, grateful |
+| **Tone** | Corporate, formal, euphemistic |
 | **Funding raised** | $50M at $333M valuation |
 
 **Key announcement language:**
-> *"It is with a heavy heart that we share RECUR will be winding down operations."*
-> *"Despite our best efforts, we were unable to secure the additional funding needed to continue."*
+> *"Today, with heavy hearts, we must share some difficult news."*
+> *"After much contemplation and consideration, we've decided to deprecate the RECUR platform, effective November 16, 2023."*
+> *"Unforeseen challenges and shifts in the business landscape have made it increasingly difficult for us to continue."*
+
+**Phased timeline:**
+- **Aug 18**: Primary/secondary sales disabled
+- **Aug 31**: Deadline to withdraw USDC balances
+- **Nov 9**: NFT deposits disabled
+- **Nov 16**: Final deadline — all NFTs and USDC must be withdrawn
+- **Nov 22**: NFT metadata migrated to IPFS/Filecoin
 
 **What they did right:**
-- Honest about the reason (funding)
-- Provided withdrawal instructions
-- Kept platform operational during wind-down
-- Grateful acknowledgment of community, brand partners, and team
+- 90-day phased wind-down with clear milestones
+- Migrated 380,000+ NFT metadata to IPFS/Filecoin for permanent storage
+- Kept platform operational during each phase
 
-**Community reaction:** Frustration (especially brand NFT holders), but some sympathy for the transparent communication.
+**What could have been better:**
+- Language was overly corporate and euphemistic ("deprecate," "shifts in the business landscape")
+- No alternative platform or migration partner offered
+
+**Community reaction:** Shock and disillusionment. Recur Pass floor price collapsed from $88,888 high to ~$1.69. Media framed it as a cautionary tale — Gizmodo's headline: *"Godfather NFTs Weren't Enough to Prevent Recur From Sleeping With the Fishes."*
 
 ---
 
@@ -179,13 +190,26 @@ For each case, we researched: announcement channels, exact wording/tone, timelin
 
 | Attribute | Detail |
 |-----------|--------|
-| **Date** | Gradual, Q3-Q4 2023 |
-| **Formal announcement** | No single shutdown post |
+| **Date** | October 23, 2023 |
+| **Channels** | Twitter/X thread by CEO Conlan Rios (@AsyncArt) |
+| **Notice period** | ~2-3 months (through Jan 22, 2024) |
 | **Asset model** | Non-custodial, BUT programmable features were platform-dependent |
+| **Tone** | Personal, reflective, grateful — founder wrote as a community member |
 
-**Unique problem:** Async Art's NFTs were "programmable" — Layer NFTs could change Master artworks. When the platform went down, the **interactive/programmable functionality degraded**, even though the NFTs still existed on-chain. The core value proposition was lost.
+**Key announcement language (CEO Conlan Rios):**
+> *"Go where you're celebrated, not tolerated."*
+> *"This has been a tough one, but the @AsyncArt team and I have made the hard decision to begin winding down operations."*
+> *"Though this is the end of Async Art as a company, it's not the end of the dynamic and generative art movement that you've all helped us build."*
 
-**Lesson for Lootex:** Even non-custodial platforms can have platform-dependent features. Clearly state what will and won't continue working after shutdown.
+**What they did right:**
+- All NFTs remain **pinned on IPFS** and on-chain
+- Built a **"Classic Art Editor"** portal so users could continue interacting with programmable artworks
+- Farewell message: *"Although we're saying goodbye, your art lives on as a testament to that."*
+- Personal, community-native tone from the founder
+
+**Community reaction:** Overwhelmingly **nostalgic and respectful** — described as "the end of an era." Artists posted heartfelt tributes. Relatively little anger because Rios communicated with genuine sincerity.
+
+**Lesson for Lootex:** Even non-custodial platforms can have platform-dependent features. Clearly state what will and won't continue working after shutdown. Async Art's personal tone from the founder generated far better reception than Recur's corporate language.
 
 ---
 
@@ -334,7 +358,7 @@ Foundation never shut down but pivoted repeatedly (invite-only → open → Worl
 | Project | Notice Period | User Action Required? |
 |---------|--------------|----------------------|
 | MakersPlace | 5-6 weeks | Yes (withdraw from custodial wallet) |
-| Recur | 6-8 weeks | Yes (transfer to external wallet) |
+| Recur | 90 days (phased) | Yes (transfer to external wallet) |
 | Gem.xyz | 5-6 months | No |
 | KnownOrigin | ~30 days | Partial (backup metadata) |
 | X2Y2 | 2-4 weeks | No |
@@ -584,11 +608,11 @@ Avoid: "Lootex is shutting down" (too abrupt for a subject line)
 | # | Project | Year | Type | Notice | Custody | Tone | Lesson |
 |---|---------|------|------|--------|---------|------|--------|
 | 1 | MakersPlace | 2024 | Formal shutdown | 5-6 weeks | Hybrid | Grateful, structured | **Gold standard** for communication |
-| 2 | Recur | 2023 | Formal shutdown | 6-8 weeks | Custodial | Honest, apologetic | Transparency earns respect |
+| 2 | Recur | 2023 | Formal shutdown | 90 days (phased) | Custodial | Corporate, euphemistic | Phased timeline is useful |
 | 3 | KnownOrigin | 2024 | Corporate shutdown | ~30 days | Non-custodial | Corporate, cold | Don't sound like a corporation |
 | 4 | LooksRare | 2023-24 | Gradual fade | None | Non-custodial | Silence | **Never** go silent |
 | 5 | Nifty Gateway | 2023-25 | Gradual fade | None | Custodial | Corporate fade | Custodial fade = maximum damage |
-| 6 | Async Art | 2023 | Gradual fade | None | Non-custodial* | Quiet | Platform-dependent features die |
+| 6 | Async Art | 2023 | Formal + personal | ~2-3 months | Non-custodial* | Personal, reflective | Personal tone = best reception |
 | 7 | Quixotic | 2022-23 | Rebrand → death | None | Non-custodial | "We're growing" → silence | Don't rebrand as a delay tactic |
 | 8 | X2Y2 | 2023 | Pivot framing | 2-4 weeks | Non-custodial | "Evolving" | Don't fake a pivot |
 | 9 | Mintable | 2023 | Pivot framing | Unclear | Non-custodial* | "Upgrading" | Lazy mints disappeared |
