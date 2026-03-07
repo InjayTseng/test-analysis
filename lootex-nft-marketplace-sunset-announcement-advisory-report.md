@@ -44,9 +44,9 @@ We analyzed 13 NFT/Web3 project shutdowns across four categories:
 
 | Category | Projects |
 |----------|----------|
-| **Formal shutdown** | MakersPlace, Recur, KnownOrigin, Async Art, Nifty Gateway |
-| **Gradual fade** | LooksRare, Quixotic |
-| **Pivot / rebrand** | X2Y2, Mintable, Foundation, Gem.xyz |
+| **Formal shutdown** | MakersPlace, Recur, KnownOrigin, Async Art, Nifty Gateway, Quixotic |
+| **Gradual fade / silent** | LooksRare, Mintable |
+| **Pivot / acquisition** | X2Y2, Foundation (→BlackDove), Gem.xyz (→OpenSea) |
 | **Abrupt shutdown** | hic et nunc, Cent |
 
 For each case, we researched: announcement channels, exact wording/tone, timeline given to users, asset handling, migration paths, and community reactions.
@@ -259,14 +259,29 @@ For each case, we researched: announcement channels, exact wording/tone, timelin
 
 ---
 
-#### Quixotic (Optimism L2)
+#### Quixotic / Quix (Optimism L2)
 
 | Attribute | Detail |
 |-----------|--------|
-| **Date** | Rebranded to Stratos (Aug 2022), then Stratos also died (2023) |
-| **Formal announcement** | Rebrand announced; subsequent death was silent |
+| **Date** | November 23, 2022 (shutdown planned: February 28, 2023) |
+| **Channels** | Twitter/X thread (@qx_app) |
+| **Notice period** | ~3 months |
+| **Asset model** | Non-custodial |
+| **Tone** | Grateful, community-oriented — "passing the torch" |
 
-**Lesson for Lootex:** Don't rebrand as a last-ditch effort. If you're shutting down, be direct.
+**Key announcement language:**
+> *"Today we're announcing that Quix as a company is winding down; now we turn to the Optimism Collective to usher Quix into its next phase."*
+
+**What they did right:**
+- ~3 months notice with specific dates
+- **Open-sourced the entire codebase** (frontend, backend, NFT indexer, launchpad) on Jan 6, 2023
+- Redirected users to OpenSea for continued trading
+- Received Optimism Foundation token grant to support maintenance through wind-down
+- Sister marketplace Stratos (Arbitrum) announced wind-down simultaneously
+
+**Plot twist:** On Feb 28, 2023 (the planned last day), a "prominent player from the web3 gaming space" stepped in and saved the marketplace from closure.
+
+**Lesson for Lootex:** Open-sourcing code and explicitly "passing the torch" to the ecosystem is a powerful gesture of goodwill. Even if no one picks it up, the offer demonstrates respect for the community.
 
 ---
 
@@ -324,30 +339,46 @@ For each case, we researched: announcement channels, exact wording/tone, timelin
 
 ---
 
-#### Gem.xyz → OpenSea Pro ⭐ **BEST TRANSITION**
+#### Gem.xyz → OpenSea Pro → OS2 ⭐ **BEST TRANSITION**
 
 | Attribute | Detail |
 |-----------|--------|
-| **Date** | Acquired April 2022, merged September 2023 |
-| **Channels** | OpenSea blog, Twitter, email, in-app notifications |
-| **Notice period** | ~5-6 months |
-| **Migration** | Seamless — user settings and features migrated to OpenSea Pro |
+| **Phase 1** | Acquired April 2022 → rebranded to OpenSea Pro (April 2023) |
+| **Phase 2** | OpenSea Pro (OS1) sunset: June 9, 2025 announcement, June 16 shutdown (**~7 days notice**) |
+| **Channels** | OpenSea blog posts, Twitter/X |
+| **Migration** | Seamless — same team, features absorbed into OS2 |
 
 **Key language:**
-> *"We're taking everything you love about Gem and bringing it to OpenSea Pro."*
-> *"OpenSea Pro is the evolution of Gem — built for pro traders."*
+> *"We're taking everything you love about Gem and bringing it to OpenSea Pro."* (Phase 1)
+> *"Saying Goodbye to OS1"* — described as "a next step forward" now that OS2 was out of beta (Phase 2)
 
-**Why it worked:** Gem was an aggregator (no asset custody), the team continued, features were preserved, and users got a working successor product. The transition was framed as an **upgrade**, and it genuinely was one.
+**Why it worked:** Gem was a non-custodial aggregator, the team continued building, and users got a working successor product. However, the OS1→OS2 transition (only 7 days notice) and feature deprecation (Deals, English Auctions, multi-currency) drew some criticism.
 
 **Lesson for Lootex:** If there's a natural successor platform or partner, recommend it. Even without a formal migration, suggesting alternatives shows you care.
 
 ---
 
-#### Foundation (still operating)
+#### Foundation → Acquired by BlackDove
 
-Foundation never shut down but pivoted repeatedly (invite-only → open → Worlds). Each change was framed as "evolution." This avoided negative headlines but caused identity confusion.
+| Attribute | Detail |
+|-----------|--------|
+| **Date** | January 27, 2025 |
+| **Channels** | BlackDove blog, founder Kayvon Tehranian on X (@saturnial), @foundation on X |
+| **Type** | Acquisition with continuity — not a shutdown |
+| **Legacy** | **$230 million** in primary sales for artists |
 
-**Lesson:** The "continuous evolution" approach only works if you actually continue operating.
+**Key language (founder Kayvon Tehranian):**
+> *"Today, I'm excited to share that Foundation is transitioning ownership to BlackDove. This is a meaningful moment for me. Foundation started as an experiment..."*
+
+**What happened:**
+- Smart contracts remain **immutable** under BlackDove management
+- Foundation continues as a "unique and standalone business"
+- Kayvon joined BlackDove Board of Directors
+- BlackDove plans to integrate Foundation with physical display distribution
+
+**Community concern:** Artist Bryan Brinkman acknowledged the platform "still clung to too many centralized choices." Collector G4SP4RD warned about metadata hosted on centralized servers.
+
+**Lesson:** An acquisition with continuity is the best-case outcome. If Lootex has any potential acquirers, this path avoids the "shutdown" narrative entirely.
 
 ---
 
@@ -412,12 +443,12 @@ Foundation never shut down but pivoted repeatedly (invite-only → open → Worl
 | 3 | **Async Art** | Personal announcement by founder + art preservation | Positive (nostalgic, respectful) |
 | 4 | **Recur** | Phased 90-day wind-down | Mixed-positive |
 | 5 | **X2Y2** | Clean break blog post + honest reflection | Mixed (muted, token already dead) |
-| 6 | **Foundation** | Continuous pivoting (no shutdown) | Mixed |
-| 7 | **hic et nunc** | Abrupt, but community forked successfully | Shock → empowerment |
-| 8 | **Cent** | Honest about problems, paused trading | Mixed |
-| 9 | **KnownOrigin** | Corporate shutdown with IPFS/migration commitments | Mixed-negative (XCOPY nostalgic; storage fears) |
-| 10 | **Mintable** | Silent wind-down, no announcement at all | Negative |
-| 11 | **Quixotic** | Rebrand → quiet death | Negative |
+| 6 | **Quixotic/Quix** | 3-month wind-down + open-sourced code (rescued) | Mixed-positive |
+| 7 | **Foundation** | Acquired by BlackDove (continuity) | Cautious optimism |
+| 8 | **hic et nunc** | Abrupt, but community forked successfully | Shock → empowerment |
+| 9 | **Cent** | Honest about problems, paused trading | Mixed |
+| 10 | **KnownOrigin** | Corporate shutdown with IPFS/migration commitments | Mixed-negative (XCOPY nostalgic; storage fears) |
+| 11 | **Mintable** | Silent wind-down, no announcement at all | Negative |
 | 12 | **LooksRare** | Gradual fade, no announcement | Very negative |
 | 13 | **Nifty Gateway** | Formal shutdown, but custodial nightmare + 30-day notice | Very negative (hostile, forced policy change) |
 
@@ -682,11 +713,11 @@ Avoid: "Lootex is shutting down" (too abrupt for a subject line)
 | 4 | LooksRare | 2023-24 | Gradual fade | None | Non-custodial | Silence | **Never** go silent |
 | 5 | Nifty Gateway | 2026 | Formal shutdown | 30→90 days | Custodial | Corporate, terse | 30-day notice + custodial = community revolt |
 | 6 | Async Art | 2023 | Formal + personal | ~2-3 months | Non-custodial* | Personal, reflective | Personal tone = best reception |
-| 7 | Quixotic | 2022-23 | Rebrand → death | None | Non-custodial | "We're growing" → silence | Don't rebrand as a delay tactic |
+| 7 | Quixotic/Quix | 2022 | Formal wind-down (rescued) | ~3 months | Non-custodial | Grateful, community handoff | Open-source code + pass the torch |
 | 8 | X2Y2 | 2025 | Clean break + pivot | 30 days | Non-custodial | Reflective, forward-looking | "Full stop, not a pause or a maybe" |
 | 9 | Mintable | 2024-25 | Silent wind-down + pivot | **None** | Non-custodial* | No announcement at all | Any announcement > silence |
 | 10 | Gem.xyz | 2023 | Acquisition merge | 5-6 months | Aggregator | "You're getting an upgrade" | **Best transition** ever |
-| 11 | Foundation | Ongoing | Continuous pivot | N/A | Non-custodial | "Evolving" | Only works if you keep operating |
+| 11 | Foundation | 2025 | Acquired by BlackDove | N/A (continuity) | Non-custodial | Reflective, "meaningful transition" | Acquisition = best-case outcome |
 | 12 | hic et nunc | 2021 | Abrupt | **Zero** | Non-custodial | "discontinued" | Community forks saved the day |
 | 13 | Cent | 2022 | Honest pause | Zero | Non-custodial | Brutally honest | Honesty can be weaponized |
 
