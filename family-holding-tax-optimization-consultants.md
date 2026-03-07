@@ -89,9 +89,11 @@
 | **CFC/PFIC 能力** | ✅ 有（前員工 Peter Tseng、Alan Yang 皆為此領域專家） |
 | **家族服務** | ✅ 有提供家族企業傳承諮詢 |
 | **台灣官網** | [deloitte.com/tw](https://www.deloitte.com/tw/tc.html) |
-| **台灣地址** | 台北市信義區松仁路 100 號（南山廣場） |
-| **美國華語服務** | 有，但需透過全球網絡轉介 |
-| **接觸方式** | 透過官網「聯繫我們」或直接致電台北辦公室稅務部 |
+| **台灣地址** | 台北市信義區松仁路 100 號 20 樓（台北南山廣場） |
+| **台灣電話** | +886 (2) 2725-9988 |
+| **美國華語服務** | ✅ **Chinese Services Group (CSG)** — 2,000+ 雙語專業人員，遍布美國 80+ 據點 |
+| **美國 CSG 官網** | [Deloitte US CSG](https://www.deloitte.com/us/en/what-we-do/capabilities/chinese-business-solutions.html) |
+| **接觸方式** | 台灣端：致電稅務部；美國端：聯繫 CSG，讓雙方對接 |
 | **預估費用** | 跨國稅務專案：NTD 200-500 萬+（依複雜度） |
 | **推薦度** | ⭐⭐⭐⭐ |
 
@@ -99,14 +101,18 @@
 
 | 項目 | 內容 |
 |------|------|
-| **台灣團隊** | 資誠聯合會計師事務所，結合普華商務法律事務所 |
-| **專長** | 國際稅務諮詢、美國稅務諮詢、家族企業暨財富傳承、跨境外派 |
+| **台灣團隊** | 資誠聯合會計師事務所，3,000+ 專業人員，結合普華商務法律事務所 |
+| **專長** | 國際稅務諮詢、**美國稅務諮詢**、家族企業暨財富傳承、跨境外派 |
 | **CFC/PFIC 能力** | ✅ 強（家族辦公室主持人洪連盛會計師專精 CFC 申報） |
 | **家族服務** | ✅ **資誠家族辦公室** — 家族治理、稅務規劃、股權設計、信託安排 |
 | **台灣官網** | [pwc.tw](https://www.pwc.tw/zh.html) |
+| **台灣地址** | 台北市信義區基隆路一段 333 號 27 樓 |
+| **台灣電話** | +886 (2) 2729-6666 |
 | **CFC 專頁** | [pwc.tw/family-cfc](https://www.pwc.tw/zh/topics/family-business/family-cfc.html) |
 | **家族辦公室** | [pwc.tw/family-business](https://www.pwc.tw/zh/services/family-business.html) |
-| **接觸方式** | 透過家族辦公室頁面預約諮詢，或直接聯繫稅務部門 |
+| **美國華語服務** | ✅ **China Business Network (CBN)** + PwC 香港美國稅務團隊（近 30 人） |
+| **PwC HK US Tax** | [pwchk.com US Tax](https://www.pwchk.com/en/services/tax/us-tax-consulting.html) |
+| **接觸方式** | 聯繫家族辦公室（洪連盛會計師團隊）或透過 PwC HK US Tax 從美國端切入 |
 | **預估費用** | 跨國稅務專案：NTD 200-500 萬+（依複雜度） |
 | **推薦度** | ⭐⭐⭐⭐⭐ **（本案首選推薦）** |
 
@@ -116,14 +122,17 @@
 
 | 項目 | 內容 |
 |------|------|
-| **台灣團隊** | 安永聯合會計師事務所（前身為致遠會計師事務所，1969 年成立） |
+| **台灣團隊** | 安永聯合會計師事務所（前身為致遠會計師事務所，1969 年成立），1,600+ 人 |
 | **專長** | CFC 反避稅合規、境外信託架構、海外資金回台 |
 | **CFC/PFIC 能力** | ✅ 強（曾成功協助客戶主張 NTD 6 億初始資金為股東往來，避免被認定為海外所得，降低稅務風險近 NTD 1.2 億） |
 | **家族服務** | ✅ **安永家族辦公室** — 梳理金流、與國稅局溝通、資金回台諮詢 |
 | **台灣官網** | [ey.com/zh_tw](https://www.ey.com/zh_tw) |
+| **台灣地址** | 台北市信義區基隆路一段 333 號 |
+| **台灣電話** | +886 (2) 2757-8888（稅務部周黎芳會計師 ext. 88872） |
 | **CFC 專頁** | [EY CFC 海外資金回台](https://www.ey.com/zh_tw/insights/family-enterprise/foreign-capital-inflows-under-cfc-rules) |
+| **境外信託** | [EY CFC 境外信託課稅](https://www.ey.com/zh_tw/insights/family-enterprise/how-cfc-rules-impact-offshore-trust) |
 | **據點** | 台北、台中、台南、桃園、新竹、高雄 |
-| **接觸方式** | 透過家族辦公室頁面或官網「聯繫我們」 |
+| **接觸方式** | 聯繫稅務部周黎芳會計師，或透過家族辦公室頁面預約 |
 | **預估費用** | 跨國稅務專案：NTD 200-500 萬+（依複雜度） |
 | **推薦度** | ⭐⭐⭐⭐⭐ |
 
@@ -133,14 +142,18 @@
 
 | 項目 | 內容 |
 |------|------|
-| **台灣團隊** | 安侯建業聯合會計師事務所 |
+| **台灣團隊** | 安侯建業聯合會計師事務所，2,500+ 專業人員 |
 | **專長** | 稅務投資、國際租稅、家族傳承、信託規劃、美國投資專區 |
 | **CFC/PFIC 能力** | ✅ 有（定期發行家族稅務辦公室月刊，涵蓋 CFC、境內外信託、未上市股權交易所得等） |
-| **家族服務** | ✅ **KPMG 家族辦公室** + **大南方家族辦公室** — 跨境傳承、信託規劃、遺產稅 |
+| **家族服務** | ✅ **KPMG 家族辦公室** + **大南方家族辦公室** — 跨境傳承、信託規劃、遺產稅（季刊已出版至第 31 期） |
 | **台灣官網** | [kpmg.com/tw](https://kpmg.com/tw/zh/home.html) |
-| **家族服務** | [KPMG 家族企業傳承](https://kpmg.com/tw/zh/home/services/family-office.html) |
+| **台灣地址** | 台北市信義區信義路五段 7 號 68 樓（台北 101 大樓） |
+| **台灣電話** | +886 (2) 8101-6666 |
+| **家族傳承服務** | [KPMG 家族企業傳承](https://kpmg.com/tw/zh/home/services/family-office.html) |
+| **家族稅務規劃** | [家族稅務及傳承規劃](https://kpmg.com/tw/zh/home/services/tax/family-estate-tax-advisory.html) |
 | **稅務月刊** | [家族稅務辦公室月刊](https://kpmg.com/tw/zh/home/services/tax/news-and-publications/family-tax-office-landing.html) |
-| **接觸方式** | 透過家族辦公室服務頁面預約，或聯繫稅務投資部 |
+| **美國華語服務** | ✅ KPMG US 華語背景團隊（服務公司創辦人及家族）+ [KPMG CN US Tax](https://kpmg.com/cn/en/services/tax/us-tax.html) |
+| **接觸方式** | 致電台北 101 總部，要求轉接家族稅務辦公室 |
 | **預估費用** | 跨國稅務專案：NTD 200-500 萬+（依複雜度） |
 | **推薦度** | ⭐⭐⭐⭐ |
 
