@@ -44,8 +44,8 @@ We analyzed 13 NFT/Web3 project shutdowns across four categories:
 
 | Category | Projects |
 |----------|----------|
-| **Formal shutdown** | MakersPlace, Recur, KnownOrigin, Async Art |
-| **Gradual fade** | LooksRare, Nifty Gateway, Quixotic |
+| **Formal shutdown** | MakersPlace, Recur, KnownOrigin, Async Art, Nifty Gateway |
+| **Gradual fade** | LooksRare, Quixotic |
 | **Pivot / rebrand** | X2Y2, Mintable, Foundation, Gem.xyz |
 | **Abrupt shutdown** | hic et nunc, Cent |
 
@@ -63,26 +63,34 @@ For each case, we researched: announcement channels, exact wording/tone, timelin
 
 | Attribute | Detail |
 |-----------|--------|
-| **Date** | December 20, 2024 (shutdown: January 28, 2025) |
-| **Channels** | Email, blog post, Twitter/X, Discord |
-| **Notice period** | ~5-6 weeks |
-| **Asset model** | Hybrid custodial — users needed to withdraw NFTs |
-| **Tone** | Grateful, empathetic, structured |
+| **Date** | January 16, 2025 (final NFT transfers: June 2025) |
+| **Channels** | **Twitter/X 6-part thread** (primary), blog post, email |
+| **Notice period** | ~5 months (phased: minting disabled immediately → transfers end June 2025) |
+| **Asset model** | Hybrid — NFTs on Ethereum (non-custodial), but some artists used custodial MakersPlace wallets |
+| **Tone** | Respectful, nostalgic, businesslike — framed as "Market Exit" |
+| **6 years** | of operations supporting digital art |
 
 **Key announcement language:**
-> *"After much deliberation, we have made the difficult decision to wind down MakersPlace operations."*
-> *"It has been an incredible journey, and we want to thank our amazing community of artists and collectors for being part of this story."*
-> *"We want to ensure a smooth transition for all of our community members."*
+> *"MakersPlace Announces Market Exit. After 6 incredible years of supporting digital art, MakersPlace is ceasing operations."*
+> *"Despite our existing runway, with these market conditions, we anticipate significant challenges in securing further investment."*
+> *"We will return the unused liquidity to investors, offer employees a fair severance, and ensure an orderly closure."*
+
+**Phased timeline:**
+- **Jan 16, 2025**: Minting, token imports, new accounts disabled
+- **Feb 2025**: Simplified transfer tool launched; purchases cease
+- **June 2025**: NFT transfers cease permanently
 
 **What they did right:**
-- Clear shutdown date announced upfront
-- Step-by-step guides for NFT withdrawal
-- Dedicated FAQ page
-- Support staff remained available throughout wind-down
-- Tools to export portfolio data
-- Committed to maintaining IPFS pins post-shutdown
+- ~5-month wind-down — longest notice period of any formal shutdown
+- Phased approach with specific dates
+- Explicitly open to **asset sale** (invited interested parties)
+- NFTs on Ethereum remain tradeable on OpenSea regardless
 
-**Community reaction:** Sadness and nostalgia, but appreciation for the structured communication. Some frustration about the short timeline over the holidays.
+**Community concern:** Collector G4SP4RD raised metadata preservation fears — *"If MakersPlace servers go offline, collections from Beeple and Sam Spratt could become broken with no possibility of recovery."*
+
+**Community reaction:** Shock (blindsided the community mid-event season), but sympathy. Former team member Kat_Zee: *"Heartbreaking. I've loved working with the @MakersPlace family for the last 3+ years."* Beeple, David Ariew, Rebecca Rose offered condolences.
+
+**Source:** [Twitter/X thread](https://x.com/MakersPlace/status/1879949477194420461)
 
 ---
 
@@ -172,21 +180,41 @@ For each case, we researched: announcement channels, exact wording/tone, timelin
 
 ---
 
-#### Nifty Gateway (Gemini)
+#### Nifty Gateway (Gemini) ⭐ **CAUTIONARY TALE — CUSTODIAL NIGHTMARE**
 
 | Attribute | Detail |
 |-----------|--------|
-| **Date** | Gradual decline 2023-2025 |
-| **Formal announcement** | No single shutdown announcement |
-| **Asset model** | **Custodial** — users needed to withdraw |
+| **Date** | January 24, 2026 (shutdown: Feb 23, 2026 → extended to April 23, 2026) |
+| **Channels** | **Gemini blog** + Nifty Gateway blog + email to users with balances + homepage notice |
+| **Notice period** | Initially **30 days** (widely criticized) → extended to **90 days** after backlash within 3 days |
+| **Asset model** | **Heavily custodial** — omnibus smart contract, no individual artist contracts |
+| **Tone** | Corporate, strategic, terse |
+| **Scale** | ~650,000 NFTs at risk; up to **$7.8M** in collector value |
 
-**Critical issue:** Users with custodied NFTs face ongoing uncertainty. The gradual decline without clear deadlines left users confused about when/if to withdraw.
+**Key announcement language (Gemini blog):**
+> *"The Nifty Gateway platform will be closing on February 23, 2026."*
+> *"This decision will allow Gemini to sharpen its focus and execute on the vision of building a one-stop super app."*
 
-**Community reaction:**
-> *"This is exactly why we need non-custodial solutions"*
-> *"Not your keys, not your NFTs"*
+**What went wrong:**
+- **30-day notice for 650,000 NFTs** was seen as grossly insufficient
+- No batch withdrawal tool initially — each NFT transferred individually ("a time-consuming UX nightmare")
+- KYC verification required to access withdrawals
+- Early NFTs (2021 and earlier) had metadata permanently linked to Nifty Gateway servers, un-migratable
 
-**Lesson for Lootex:** Nifty Gateway's custodial model made their fade-out particularly damaging. Lootex's non-custodial model is a **massive advantage** — emphasize this prominently.
+**Community backlash forced changes within 3 days (Jan 27):**
+- Deadline extended from Feb 23 to **April 23, 2026**
+- Promise to build **bulk withdrawal tool**
+- Commitment to migrate metadata to **Arweave** (permanent decentralized storage)
+- Older NFT metadata to be hosted "indefinitely"
+
+**Community reaction — hostile:**
+> *"Isn't the whole point of NFTs that we have complete ownership and custody of the tokens?"* — Artchick
+> *"This is the dark side of Web3. 650,000 NFTs. One deadline. No second chances."* — Lancaster.eth
+> *"Now we are left with more questions than answers."* — Bryan Brinkman
+
+**Lesson for Lootex:** Nifty Gateway's custodial model made their shutdown the most stressful in NFT history. Lootex's non-custodial model is a **massive advantage** — the single most important fact to lead with. Also: 30 days was too short even for a non-custodial platform's credibility.
+
+**Sources:** [Gemini blog](https://www.gemini.com/blog/announcing-nifty-gateways-closure) | [Decrypt](https://decrypt.co/355934/influential-nft-platform-nifty-gateway-shut-down-february) | [Artnet](https://news.artnet.com/art-world/nifty-gateway-closed-down-2740267)
 
 ---
 
@@ -375,16 +403,17 @@ Foundation never shut down but pivoted repeatedly (invite-only → open → Worl
 | 10 | **Mintable** | Misleading "evolution" framing | Negative |
 | 11 | **Quixotic** | Rebrand → quiet death | Negative |
 | 12 | **LooksRare** | Gradual fade, no announcement | Very negative |
-| 13 | **Nifty Gateway** | Gradual fade + custodial concerns | Very negative |
+| 13 | **Nifty Gateway** | Formal shutdown, but custodial nightmare + 30-day notice | Very negative (hostile, forced policy change) |
 
 ### Notice Period Comparison
 
 | Project | Notice Period | User Action Required? |
 |---------|--------------|----------------------|
-| MakersPlace | 5-6 weeks | Yes (withdraw from custodial wallet) |
+| MakersPlace | ~5 months (phased) | Partial (custodial wallet users) |
 | Recur | 90 days (phased) | Yes (transfer to external wallet) |
 | Gem.xyz | 5-6 months | No |
 | KnownOrigin | ~30 days | Partial (backup metadata) |
+| Nifty Gateway | 30→90 days (extended after backlash) | Yes (withdraw from custodial omnibus contract) |
 | X2Y2 | 30 days | No |
 | hic et nunc | **0 days** | No |
 | Cent | Immediate | No |
@@ -631,11 +660,11 @@ Avoid: "Lootex is shutting down" (too abrupt for a subject line)
 
 | # | Project | Year | Type | Notice | Custody | Tone | Lesson |
 |---|---------|------|------|--------|---------|------|--------|
-| 1 | MakersPlace | 2024 | Formal shutdown | 5-6 weeks | Hybrid | Grateful, structured | **Gold standard** for communication |
+| 1 | MakersPlace | 2025 | Formal shutdown | ~5 months (phased) | Hybrid | Nostalgic, businesslike | **Gold standard** — longest notice period |
 | 2 | Recur | 2023 | Formal shutdown | 90 days (phased) | Custodial | Corporate, euphemistic | Phased timeline is useful |
 | 3 | KnownOrigin | 2024 | Corporate shutdown | ~30 days | Non-custodial | Corporate, cold | Don't sound like a corporation |
 | 4 | LooksRare | 2023-24 | Gradual fade | None | Non-custodial | Silence | **Never** go silent |
-| 5 | Nifty Gateway | 2023-25 | Gradual fade | None | Custodial | Corporate fade | Custodial fade = maximum damage |
+| 5 | Nifty Gateway | 2026 | Formal shutdown | 30→90 days | Custodial | Corporate, terse | 30-day notice + custodial = community revolt |
 | 6 | Async Art | 2023 | Formal + personal | ~2-3 months | Non-custodial* | Personal, reflective | Personal tone = best reception |
 | 7 | Quixotic | 2022-23 | Rebrand → death | None | Non-custodial | "We're growing" → silence | Don't rebrand as a delay tactic |
 | 8 | X2Y2 | 2025 | Clean break + pivot | 30 days | Non-custodial | Reflective, forward-looking | "Full stop, not a pause or a maybe" |
