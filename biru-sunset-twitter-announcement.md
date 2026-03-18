@@ -98,11 +98,12 @@ Every mint, every stake, every combo — that was you.
 ### Tweet 6 / 7 — What's Next for Users
 
 ```
-Your NFTs live on-chain and can be traded on any Soneium-compatible marketplace.
+Your NFTs live on-chain and can be traded on any Soneium-compatible marketplace:
+
+→ @sonaboratory (Sonova) — Soneium-native marketplace
+→ @opensea — supports Soneium
 
 For creators: your smart contracts are yours — they work independently of Biru.
-
-We'll share a list of alternative platforms in our full blog post.
 ```
 
 ---

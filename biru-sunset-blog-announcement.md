@@ -98,10 +98,13 @@ Every mint, every stake, every Beer Point earned, every combo in FizzPop — tha
 
 Your NFTs live on-chain and can be accessed from any compatible platform. Here are some alternatives for the Soneium ecosystem:
 
-- [**List 2-3 alternative Soneium marketplaces or general marketplaces that support Soneium**]
-- For broader NFT trading: OpenSea, Magic Eden, or other multi-chain marketplaces that support Soneium
+- **[Sonova](https://sonova.one)** — A Soneium-native NFT marketplace and launchpad (co-operated by Tempura Technologies and X2Y2 Japan)
+- **[OpenSea](https://opensea.io)** — Supports Soneium as a chain; many Soneium collections are already listed
+- For broader multi-chain NFT trading: Magic Eden and other aggregators
 
 If you're a creator who launched a collection on Biru's launchpad, your smart contracts are yours — they exist on-chain and function independently.
+
+**A note about Soneium:** The Soneium ecosystem is thriving and continues to grow with Sony's ongoing investment. Biru's wind-down is a Biru decision — it does not reflect the state of Soneium, which remains an active and expanding blockchain. The Soneium community and its creators have a bright future ahead.
 
 ---
 
@@ -178,6 +181,8 @@ This draft maintains Biru's signature playful, brewery-themed voice ("last call,
 - [ ] Confirm staking auto-return mechanism with engineering
 - [ ] Identify 2-3 alternative Soneium marketplaces to recommend
 - [ ] Decide whether Justine Lu will add a personal note (highly recommended based on research — Async Art and MakersPlace founders' personal messages received the best community response)
+- [ ] **IMPORTANT**: Avoid claiming Biru is "the one and only" Soneium marketplace — Sonova (by X2Y2 Japan + Tempura) and OpenSea both operate on Soneium. Use "one of the earliest" or "a dedicated" instead.
+- [ ] **IMPORTANT**: Do NOT imply Soneium is declining — Sony invested $13M in Jan 2026, Soneium is ranked #56 by TVL and actively growing. The blog explicitly clarifies this.
 - [ ] Prepare Traditional Chinese version
 - [ ] Coordinate with Soneium team on timing (brief them before public announcement)
 - [ ] Plan for Discord Q&A on announcement day
