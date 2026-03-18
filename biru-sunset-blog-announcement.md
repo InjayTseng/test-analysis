@@ -81,12 +81,14 @@ When we set out to build Biru, we wanted to create something different — not j
 
 And you showed up. Together, we:
 
-- **Launched Biru's Brew** — the commemorative NFT celebrating Soneium's mainnet launch
+- **Launched Biru's Brew: Soneium's First Sip** — the free commemorative NFT celebrating Soneium's mainnet launch
 - **Created the Brewverse** — a world of Beer Points, staking, quests, and community campaigns
 - **Brought Birunoko to life** — 6,666 hand-drawn PFPs with R.T Dragon, the first PFP collection on Soneium
+- **Built Kill Biru** — a samurai-themed collection with an innovative burn-to-earn mechanic
 - **Hosted Biru Game Night** at Taipei Game Show 2025, bridging gaming and blockchain communities
 - **Built FizzPop** — a match-3 game that proved NFTs can be genuinely fun
 - **Launched the Astar Brew Challenge** — 100 days, 100M $ASTR, across 10 seasons
+- **Grew a community of 86,000+** across Twitter/X — all of you who showed up and brewed with us
 - **Established a presence in Japan**, working to bring the Soneium ecosystem to new audiences
 - **Pioneered $ASTR minting** on Soneium
 
@@ -152,7 +154,7 @@ Biru started as an experiment — could we build the most fun NFT experience on 
 
 The tap might be closing, but the memories, the art, and the NFTs — those live on.
 
-Cheers,
+CHEERS! 🍻
 **The Biru Team (by Lootex)**
 
 ---

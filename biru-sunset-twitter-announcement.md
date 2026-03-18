@@ -82,10 +82,11 @@ As Lootex evolves its strategy, we've decided to consolidate our efforts. Biru w
 ### Tweet 5 / 7 — Gratitude & Milestones
 
 ```
-What we built together:
+What we built together with 86,000+ of you:
 
-🍺 Biru's Brew — Soneium mainnet commemorative NFT
-🎨 Birunoko — 6,666 PFPs with @RTDragonArt, the first PFP on Soneium
+🍺 Biru's Brew — Soneium's First Sip commemorative NFT
+🎨 Birunoko — 6,666 hand-drawn PFPs, the first PFP on Soneium
+⚔️ Kill Biru — samurai burn-to-earn
 🎮 FizzPop — match-3 fun, powered by Beer Points
 🏆 Astar Brew Challenge — 100 days, 10 seasons
 🇯🇵 Biru Game Night at Taipei Game Show
@@ -117,7 +118,7 @@ Thank you for choosing to brew with us.
 
 The tap is closing, but the art, the memories, and the NFTs — those live on.
 
-Cheers 🍻
+CHEERS! 🍻
 
 Full details & FAQ: [blog.biru.gg link]
 ```
@@ -136,6 +137,8 @@ After an incredible run on @soneium, Biru is winding down on [DATE].
 Your NFTs are safe — Biru is non-custodial. You don't need to do anything.
 
 Thank you to every minter, collector, and community member who brewed with us.
+
+CHEERS! 🍻
 
 Full details & FAQ 👇
 [blog.biru.gg link]
@@ -216,11 +219,17 @@ Based on analysis of 13 NFT marketplace shutdowns:
 - KnownOrigin (thread) — good for factual clarity
 - **Anti-pattern**: Cent announced via media interview, not their own channels. Always announce to YOUR community first.
 
-### Tone Calibration
-- Biru's Twitter voice is **playful and fun** (beer puns, game references, community energy)
+### Tone Calibration — @Biru_gg Brand Voice Reference
+- **Followers**: ~86,600 (account created Dec 2024 — rapid growth)
+- **Signature sign-off**: "CHEERS! 🍻" — used on virtually every post. Must appear in final tweet.
+- **Emoji style**: Heavy — 🍻🍺✨📢🔓🎩 (beer mugs, sparkles, loudspeakers)
+- **Typical phrasing**: "NOW LIVE!", "CLOCK-IN TIME!", exclamation-heavy, high-energy
+- **Beer metaphors everywhere**: "Brewverse," "Beer Points," "Astar Brew," "First Sip," "Last Call"
+- **Reply style**: Short and warm ("Nice bubble! Cheers!")
 - The shutdown thread should maintain warmth but shift to **sincere and direct**
-- Avoid: corporate jargon ("after careful consideration"), overuse of emojis, fake optimism
+- Avoid: corporate jargon ("after careful consideration"), fake optimism
 - Do: use Biru's signature language ("brew," "cheers," "tap"), be honest, be specific
+- The thread can be slightly less emoji-heavy than normal posts — gravity is appropriate here
 
 ### What NOT to Do (from Research)
 - Don't announce via a third-party media outlet first (Cent's mistake)
